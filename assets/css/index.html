@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <title>Kartilo</title>
+</head>
+
+<body>
+  <main>
+
+    <!-- The starting box -->
+    <section class="start">
+      <h1 class="start__header">Welcome to Kartilo</h1>
+      <button class="button button--start">Start</button>
+    </section>
+
+    <!-- The rules box -->
+    <section class="rules u-inactive">
+      <header class="rules__header">
+        <h2 class="rules__heading">The Rules</h2>
+      </header>
+      <div class="rules__list">
+        <p class="rules__item">1. Your first answer is your final answer.</p>
+        <p class="rules__item">2. You will get one point for each correct answer.</p>
+        <p class="rules__item">3. You cannot exit the quiz once you start.</p>
+      </div>
+      <footer class="rules__footer">
+        <button class="button button--exit">Exit</button>
+        <button class="button button--continue">Continue</button>
+      </footer>
+    </section>
+
+    <!-- The question box -->
+    <section class="quiz u-inactive"> <!-- u-inactive -->
+      <header class="quiz__header">
+        <h2 class="quiz__heading">Kartilo</h2>
+        <div class="quiz__timer">
+          <p class="quiz__timer-text">Time Left</p>
+          <p class="quiz__timer-count">15</p>
+        </div>
+      </header>
+      <div class="quiz__questions-container">
+        <div class="quiz__question">
+          <h3>What does HTML stand for?</h3>
+        </div>
+        <button class="quiz__selection" data-question-id="1">
+          <span>Hyper Text Preprocessor</span><i class="fa-solid fa-times"></i>
+        </button>
+        <button class="quiz__selection" data-question-id="2">
+          <span>Hyper Text Markup Language</span><i class="fa-solid fa-check"></i>
+        </button>
+        <button class="quiz__selection" data-question-id="3">
+          <span>Hyper Text Multiple Language</span><i class="fa-solid fa-times"></i>
+        </button>
+        <button class="quiz__selection" data-question-id="4">
+          <span>Hyper Tool Multi Language</span><i class="fa-solid fa-times"></i>
+        </button>
+      </div>
+      <footer class="quiz__footer">
+        <div class="quiz__progress">
+          <p><span class="quiz__current-q">x</span> of <span class="quiz__total-q">y</span> Questions</p>
+        </div>
+        <button class="button button--continue">Next Question</button>
+      </footer>
+    </section>
+
+  </main>
+
+  <script src="https://kit.fontawesome.com/c4337c00d0.js" crossorigin="anonymous"></script>
+  <script src="/assets/scripts/script.js"></script>
+</body>
+
+</html>

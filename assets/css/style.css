@@ -1,0 +1,286 @@
+/* ============================================================ VARIABLES */
+:root {
+  --box-background: hsl(100, 100%, 100%);
+  --body-background: hsl(144, 35%, 75%);
+  --button-background: hsl(0, 0%, 49%);
+  --button--start-font-color: hsl(144, 35%, 50%);
+  --quiz-selection-background: #D9EDDF;
+  --quiz-selection-border: #A9D6BB;
+  --button-exit-color: hsl(144, 62%, 25%);
+  --button-exit-border: hsl(144, 62%, 25%);
+  --button-continue-color: hsl(100, 100%, 100%);
+  --button-continue-background: hsl(144, 35%, 75%);
+  --quiz-timer-background: #c1e4cb;
+  --quiz-timer-count-background: hsl(0, 0%, 20%);
+  --quiz-timer-count-color: hsl(100, 100%, 100%);
+
+  --mid: #9CB0A4;
+  --light: #A9D6BB;
+  --dark: #9CB0A4;
+  --some-blue: #8AB1F6;
+  --soft-cream: hsl(44, 72%, 93%);
+  --white: hsl(100, 100%, 100%);
+  --charcoal-grey: hsl(0, 0%, 20%);
+  --subtle-gray: hsl(0, 0%, 49%);
+  --muted-blue: hsl(212, 72%, 59%);
+  --soft-green: hsl(144, 35%, 75%);
+  --muted-red: hsl(0, 69%, 67%);
+  --golden-yellow: hsl(51, 100%, 50%);
+  --teal: hsl(174, 63%, 40%);
+  --dusty-rose: hsl(0, 41%, 69%);
+}
+
+
+/* ============================================================ STYLE RESET */
+*,
+::before,
+::after {
+  padding: 0px;
+  margin: 0px;
+  border: 0px;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Roboto Flex";
+  src:
+    url("../fonts/roboto-flex.woff2") format("woff2"),
+    local("sans-serif");
+  font-style: normal;
+  font-weight: 100 1000;
+  font-stretch: normal;
+  font-display: swap;
+}
+
+/* Base font settings */
+body {
+  font-family: 'Roboto Flex', sans-serif;
+  font-size: 16px;
+  /* Default body text size */
+  font-weight: 400;
+  /* Regular weight */
+  background-color: var(--body-background, hsl(144, 35%, 75%));
+}
+
+/* Headings */
+h1 {
+  font-size: 2.5em;
+  /* 40px if base is 16px */
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 2em;
+  /* 32px is base is 16px*/
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 1.75em;
+  /* 28px is base is 16px*/
+  font-weight: 500;
+}
+
+.subheading {
+  font-size: 1.5em;
+  /* 24px is base is 16px */
+  font-weight: 500;
+}
+
+/* ============================================================ <MAIN> */
+main {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  position: relative;
+  min-height: 100vh;
+}
+
+/* ============================================================ BOXES */
+
+/* Box */
+.start,
+.rules,
+.quiz {
+  position: absolute;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  max-width: 90%;
+  width: 90%;
+  background-color: var(--box-background, hsl(100, 100%, 100%));
+  border-radius: 5px;
+  /* padding: 1rem 2rem; */
+  box-shadow: 0px 3px 9px 0 hsla(0, 0%, 0%, 0.2), 0px 5px 15px 0 hsla(0, 0%, 0%, 0.12);
+}
+
+/* Box Start */
+
+.start {
+  width: 600px;
+  padding: 3rem;
+}
+
+.start__header {
+  text-align: center;
+  padding-bottom: 2rem;
+}
+
+/* Box Rules */
+
+.rules {
+  width: 600px;
+}
+
+
+.rules__header {
+  border-bottom: 1px solid lightgray;
+  width: 100%;
+  padding: 1rem 1rem;
+}
+
+.rules__heading {
+
+}
+
+.rules__list {
+  padding: 1rem 1rem;
+  width: 100%;
+}
+
+.rules__item {
+  padding: 0.5rem 0;
+}
+
+.rules__footer {
+  width: 100%;
+  padding: 1rem 1rem;
+  border-top: 1px solid lightgrey;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Box Questions */
+
+.quiz {
+  width: 600px;
+}
+
+.quiz__header {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0.5rem 1rem;
+  box-shadow: 0px 3px 5px 1px rgba(0,0,0,0.1);
+  border-radius: 5px 5px 0 0;
+}
+
+.quiz__timer {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: var(--quiz-timer-background);
+  border-radius: 5px;
+  padding: 0.5rem;
+}
+
+.quiz__timer-text {
+  
+}
+.quiz__timer-count {
+  background-color: var(--quiz-timer-count-background);
+  color: var(--quiz-timer-count-color);
+  border-radius: 5px;
+  padding: 0.3rem;
+}
+
+.quiz__questions-container {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: stretch;
+  width: 100%;
+  padding: 1rem 1rem;
+  gap: 1rem;
+}
+
+.quiz__question {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+.quiz__selection {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  padding: 1rem;
+  background-color: var(--quiz-selection-background);
+  border: 1px solid var(--quiz-selection-border);
+  border-radius: 5px;
+}
+
+.quiz__footer {
+  padding: 1rem;
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.quiz__progress {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 0.5rem;
+}
+
+/* ============================================================ BUTTONS */
+
+.button {
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 1rem;
+}
+
+.button--start {
+  color: var(--button--start-font-color);
+  font-size: 1.5rem;
+  font-weight: 500;
+  box-shadow: 0px 3px 9px 0 hsla(0, 0%, 0%, 0.2), 0px 5px 15px 0 hsla(0, 0%, 0%, 0.12);
+}
+
+.button--exit {
+  color: var(--button-exit-color);
+  border: 1px solid var(--button-exit-border);
+}
+
+.button--continue {
+  color: var(--button-continue-color);
+  background-color: var(--button-continue-background);
+}
+
+/* ============================================================ UTILITY CLASSES */
+
+.u-active {
+  display: flex;
+}
+
+.u-inactive {
+  display: none;
+  pointer-events: none;
+}
