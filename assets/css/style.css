@@ -217,7 +217,7 @@ main {
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
-  align-items: ;
+  align-items: stretch;
   width: 100%;
   padding: 1rem 1rem;
   gap: 1rem;
