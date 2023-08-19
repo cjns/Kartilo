@@ -106,11 +106,14 @@ Ensure there is sufficient contract between the text and background.
 - [WebP Converter](https://developers.google.com/speed/webp): Converting images to the WebP format.
 - [JEST](https://jestjs.io/): JavaScript testing.
 - [jshint](https://jshint.com): JavaScript testing.
+- [Font Awesome](https://fontawesome.com/): Icons.
 ## Testing
 Please visit the [testing](./testing.md) file.
 ## Deployment & Local Development
 ## Credits
 ### Content
+### Code
+[Fisher-Yates (Knuff) shuffle](https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array)
 ### Media
 #### Animations
 #### Images

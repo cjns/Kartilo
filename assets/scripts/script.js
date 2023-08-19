@@ -35,4 +35,39 @@ const SECTION_QUIZ = document.querySelector('.quiz');
 const CURRENT_QUESTION_NUM = document.querySelector('.quiz__current-q');
 const TOTAL_QUESTION_NUM = document.querySelector('.quiz__total-q');
 
+let currentQuestionNumber = 0;
+let totalNumberOfQuestions = 0;
 
+// FUNCTIONS
+// Fisher-Yates Shuffle adapted from https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array
+function shuffle(array) {
+  let currentIndex = array.length,  randomIndex;
+
+  // While there remain elements to shuffle.
+  while (currentIndex != 0) {
+
+    // Pick a remaining element.
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex--;
+
+    // And swap it with the current element.
+    [array[currentIndex], array[randomIndex]] = [
+      array[randomIndex], array[currentIndex]];
+  }
+
+  return array;
+}
+
+console.log(shuffle(JAVASCRIPT_QUIZ));
+
+// Get X questions from the shuffled array. Default is 3. End is not included in slice.
+function retrieveQuestions(numberOfQuestions = 3) {
+  // Assign total number of questions.
+  totalNumberOfQuestions = numberOfQuestions;
+  // Shuffle the questions.
+  const SHUFFLED_ARRAY = shuffle(JAVASCRIPT_QUIZ);
+  // Return X number of questions
+  return SHUFFLED_ARRAY.slice(0, numberOfQuestions);
+};
+
+console.log(shuffle(retrieveQuestions()));
