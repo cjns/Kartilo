@@ -118,7 +118,7 @@ main {
   box-shadow: 0px 3px 9px 0 hsla(0, 0%, 0%, 0.2), 0px 5px 15px 0 hsla(0, 0%, 0%, 0.12);
 }
 
-/* Box Start */
+/* Start Block */
 
 .start {
   width: 600px;
@@ -130,7 +130,7 @@ main {
   padding-bottom: 2rem;
 }
 
-/* Box Rules */
+/* Rules Block */
 
 .rules {
   width: 600px;
@@ -167,7 +167,7 @@ main {
   gap: 1rem;
 }
 
-/* Box Questions */
+/* Quiz Block */
 
 .quiz {
   width: 600px;
@@ -175,7 +175,7 @@ main {
 
 .quiz__header {
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: row wrap;
   justify-content: space-between;
   align-items: center;
   width: 100%;
@@ -205,21 +205,22 @@ main {
   padding: 0.3rem;
 }
 
-.quiz__questions-container {
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: center;
-  align-items: stretch;
-  width: 100%;
-  padding: 1rem 1rem;
-  gap: 1rem;
-}
-
 .quiz__question {
   display: flex;
   flex-flow: row nowrap;
   justify-content: flex-start;
   align-items: flex-end;
+  padding: 1rem 1rem;
+}
+
+.quiz__questions-container {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: ;
+  width: 100%;
+  padding: 1rem 1rem;
+  gap: 1rem;
 }
 
 .quiz__selection {
@@ -230,13 +231,18 @@ main {
   background-color: var(--quiz-selection-background);
   border: 1px solid var(--quiz-selection-border);
   border-radius: 5px;
+  cursor: pointer;
+}
+
+.quiz__selection:hover {
+  background-color: hsl(144, 35%, 75%);
 }
 
 .quiz__footer {
   padding: 1rem;
   width: 100%;
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: row wrap;
   justify-content: space-between;
   align-items: center;
 }
@@ -269,7 +275,8 @@ main {
   border: 1px solid var(--button-exit-border);
 }
 
-.button--continue {
+.button--continue,
+.button--next {
   color: var(--button-continue-color);
   background-color: var(--button-continue-background);
 }
@@ -282,5 +289,4 @@ main {
 
 .u-inactive {
   display: none;
-  pointer-events: none;
 }
