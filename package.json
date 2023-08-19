@@ -1,0 +1,15 @@
+{
+  "name": "kartilo",
+  "version": "1.0.0",
+  "description": "Kartilo is an interactive web application for learning quiz/flash cards. The name comes from the [Esperanto](https://en.wikipedia.org/wiki/Esperanto) word 'karto', which means 'card', and the suffix '-ilo', which indicates a tool or instrument.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --coverage"
+  },
+  "author": "Callan Jones",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.6.2",
+    "jest-environment-jsdom": "^29.6.2"
+  }
+}
