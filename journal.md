@@ -30,6 +30,7 @@
     - Randomising the placement of the answer within the multiple choice quiz.
 - 19/08/23
   - I reverted the code back to the 14th so I can track the development better with more frequent commits.
-  - 
+  - Installed npm, jest, and jsdom.
+  - After thinking about randomising the placement of the answers within the multiple choice quiz I decided to use the Fisher-Yates shuffle on an array then assign the 
 
 

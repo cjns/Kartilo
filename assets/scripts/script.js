@@ -26,6 +26,8 @@ EXIT_BUTTON.addEventListener('click', () => {
 CONTINUE_BUTTON.addEventListener('click', () => {
   SECTION_RULES.classList.toggle('u-inactive'); // Disable the rules section
   SECTION_QUIZ.classList.toggle('u-inactive'); // Enable the quiz section
+  retrieveQuestions();
+  displayQuestion(currentQuestionIndex);
 });
 
 //
@@ -35,8 +37,10 @@ const SECTION_QUIZ = document.querySelector('.quiz');
 const CURRENT_QUESTION_NUM = document.querySelector('.quiz__current-q');
 const TOTAL_QUESTION_NUM = document.querySelector('.quiz__total-q');
 
-let currentQuestionNumber = 0;
+let currentQuestionIndex = 0;
 let totalNumberOfQuestions = 0;
+
+// Next question button
 
 // FUNCTIONS
 // Fisher-Yates Shuffle adapted from https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array
@@ -58,16 +62,36 @@ function shuffle(array) {
   return array;
 }
 
-console.log(shuffle(JAVASCRIPT_QUIZ));
-
 // Get X questions from the shuffled array. Default is 3. End is not included in slice.
+let shuffledArray = [];
 function retrieveQuestions(numberOfQuestions = 3) {
   // Assign total number of questions.
   totalNumberOfQuestions = numberOfQuestions;
   // Shuffle the questions.
-  const SHUFFLED_ARRAY = shuffle(JAVASCRIPT_QUIZ);
+  shuffledArray = shuffle(JAVASCRIPT_QUIZ);
   // Return X number of questions
-  return SHUFFLED_ARRAY.slice(0, numberOfQuestions);
+  shuffledArray = shuffledArray.slice(0, numberOfQuestions);
+  return shuffledArray;
 };
 
-console.log(shuffle(retrieveQuestions()));
+// Display Questions into the html
+function displayQuestion(index) {
+  // Create an array of the possible answers.
+  let options = [
+    shuffledArray[index].Answer,
+    shuffledArray[index].Distractor1,
+    shuffledArray[index].Distractor2,
+    shuffledArray[index].Distractor3
+  ];
+  // Shuffle the data-question-id range.
+  let dataQuestionIdRange = [0, 1, 2, 3];
+  let randomDataQuestionIdRange = shuffle(dataQuestionIdRange);
+  // Set question title
+  document.querySelector('.quiz__question h3').innerHTML = `${index + 1}. ${shuffledArray[index].Question}`;
+  // Loop through the randomDataQuestionIdRange indices
+  for(let i = 0; i <= 3; i++) {
+    document.querySelector(`[data-question-id="${randomDataQuestionIdRange[i]}"] > span`).innerHTML = options[i];
+    
+  };
+  currentQuestionIndex++;
+};
