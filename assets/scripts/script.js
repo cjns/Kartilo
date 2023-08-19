@@ -28,6 +28,7 @@ CONTINUE_BUTTON.addEventListener('click', () => {
   SECTION_QUIZ.classList.toggle('u-inactive'); // Enable the quiz section
   retrieveQuestions();
   displayQuestion(currentQuestionIndex);
+  updateQuestionCounter();
 });
 
 //
@@ -38,6 +39,7 @@ const CURRENT_QUESTION_NUM = document.querySelector('.quiz__current-q');
 const TOTAL_QUESTION_NUM = document.querySelector('.quiz__total-q');
 
 let currentQuestionIndex = 0;
+let currentQuestionNumber = 0;
 let totalNumberOfQuestions = 0;
 
 // Next question button
@@ -95,3 +97,9 @@ function displayQuestion(index) {
   };
   currentQuestionIndex++;
 };
+
+// Display question counter
+function updateQuestionCounter() {
+  currentQuestionNumber++;
+  document.querySelector('.quiz__current-q').innerHTML = currentQuestionNumber;
+}
