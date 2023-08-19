@@ -14,7 +14,11 @@ Performance: [Lighthouse (Within Chrome Developer Tools)](https://developer.chro
 |Page|HTML|WAVE|Lighthouse Mobile|Lighthouse Desktop|
 |-|-|-|-|-|
 |x|x|x|x|x|
-CSS 
+CSS:
+## JavaScript Testing
+|File|JSHint|
+|-|-|
+|x|x|
 ## Manual Testing
 |Feature|Expected Outcome|Testing Performed|Result|Pass / Fail|
 |-|-|-|-|-|

@@ -6,11 +6,3 @@
 // Isolate: Atomic, isolated testing.
 // Thorough: Edge cases.
 // Explicit: Obvious what the test does.
-
-//
-
-describe("", ()=> {
-
-}
-
-);
