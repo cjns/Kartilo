@@ -104,6 +104,8 @@ Ensure there is sufficient contract between the text and background.
 - [Google Variable Fonts](https://fonts.google.com/variablefonts): Variable Fonts.
 - [Google Fonts Knowledge](https://fonts.google.com/knowledge/): Typography Knowledge. 
 - [WebP Converter](https://developers.google.com/speed/webp): Converting images to the WebP format.
+- [JEST](https://jestjs.io/): JavaScript testing.
+- [jshint](https://jshint.com): JavaScript testing.
 ## Testing
 Please visit the [testing](./testing.md) file.
 ## Deployment & Local Development
