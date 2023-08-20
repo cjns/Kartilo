@@ -26,4 +26,20 @@ CSS:
 ## Unit Testing
 ## Bugs Discovered
 ### Solved Bugs
+#### Issue: Getting Jest to work with ES6 Syntax and separated JavaScript files.
+Error:
+```
+Jest failed to parse a file. This happens e.g. when your code or its dependencies use non-standard JavaScript syntax, or when Jest is not configured to support such syntax.
+```
+Solution: Ensure you have Babel set up.
+```
+npm install --save-dev @babel/core @babel/preset-env babel-jest
+```
+Create a  '.babelrc' file in your project root with the following content:
+```
+{
+  "presets": ["@babel/preset-env"]
+}
+```
 ### Unsolved Bugs
+N/A
