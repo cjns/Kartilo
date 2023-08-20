@@ -30,7 +30,12 @@ function retrieveQuestions(numberOfQuestions = 3) {
   return shuffledArray;
 };
 
+function retrieveTotalQuestionNum(array) {
+  return array.length;
+}
+
 export {
   shuffle,
-  retrieveQuestions
+  retrieveQuestions,
+  retrieveTotalQuestionNum
 };

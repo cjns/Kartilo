@@ -1,8 +1,9 @@
-import { shuffle, retrieveQuestions } from './logic.js';
+import { shuffle, retrieveQuestions, retrieveTotalQuestionNum } from './logic.js';
 
 let currentQuestionIndex = 0;
 let currentQuestionNumber = 0;
 let shuffledArray;
+let totalQuestionNum;
 
 function initialiseUI() {
   // DOM element selections
@@ -33,9 +34,15 @@ function initialiseUI() {
     SECTION_RULES.classList.toggle('u-inactive'); // Disable the rules section
     SECTION_QUIZ.classList.toggle('u-inactive'); // Enable the quiz section
     shuffledArray = retrieveQuestions();
+    totalQuestionNum = retrieveTotalQuestionNum(shuffledArray);
     displayQuestion(currentQuestionIndex);
     displayQuestionCounter();
+    displayTotalQuestionNum(totalQuestionNum);
   });
+
+  // NEXT_BUTTON.addEventListener('click', () => {
+  //   // if(currentQuestionNumber > ) {}
+  // });
 };
 
 // Add questions into the html
@@ -65,6 +72,11 @@ function displayQuestion(index) {
 function displayQuestionCounter() {
   currentQuestionNumber++;
   return document.querySelector('.quiz__current-q').innerHTML = currentQuestionNumber;
+}
+
+// Display total number of questions
+function displayTotalQuestionNum(num) {
+  return document.querySelector('.quiz__total-q').innerHTML = num;
 }
 
 export {
