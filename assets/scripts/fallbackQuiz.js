@@ -109,4 +109,6 @@ const JAVASCRIPT_QUIZ = [
   }
 ];
 
-export default JAVASCRIPT_QUIZ;
+export {
+  JAVASCRIPT_QUIZ
+};

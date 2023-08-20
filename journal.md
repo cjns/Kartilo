@@ -31,6 +31,9 @@
 - 19/08/23
   - I reverted the code back to the 14th so I can track the development better with more frequent commits.
   - Installed npm, jest, and jsdom.
-  - After thinking about randomising the placement of the answers within the multiple choice quiz I decided to use the Fisher-Yates shuffle on an array then assign the 
-
+  - After thinking about randomising the placement of the answers within the multiple choice quiz I decided to use the Fisher-Yates shuffle to shuffle the answer buttons rather than the object properties.
+  - Installed Jest and experienced issues with Common JS and ES6 Module syntax.
+- 20/08/23
+  - Refactored the code to use Common JS syntax when importing/exporting js files/functions.
+  - Encountered an issue with Jest testing because the DOM related code in script.js was executing immediately. It is is advised that I separate the logic from the DOM manipulations and then call them when the DOM is ready.
 
