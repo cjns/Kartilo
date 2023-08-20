@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1692549641115" clover="3.2.0">
-  <project timestamp="1692549641115" name="All files">
-    <metrics statements="10" coveredstatements="7" conditionals="1" coveredconditionals="0" methods="2" coveredmethods="1" elements="13" coveredelements="8" complexity="0" loc="10" ncloc="10" packages="1" files="2" classes="2"/>
+<coverage generated="1692550275999" clover="3.2.0">
+  <project timestamp="1692550275999" name="All files">
+    <metrics statements="10" coveredstatements="10" conditionals="1" coveredconditionals="0" methods="2" coveredmethods="2" elements="13" coveredelements="12" complexity="0" loc="10" ncloc="10" packages="1" files="2" classes="2"/>
     <file name="fallbackQuiz.js" path="C:\Users\CJ\Kartilo\assets\scripts\fallbackQuiz.js">
       <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       <line num="1" count="1" type="stmt"/>
     </file>
     <file name="logic.js" path="C:\Users\CJ\Kartilo\assets\scripts\logic.js">
-      <metrics statements="9" coveredstatements="6" conditionals="1" coveredconditionals="0" methods="2" coveredmethods="1"/>
-      <line num="5" count="4" type="stmt"/>
-      <line num="8" count="4" type="stmt"/>
-      <line num="11" count="19" type="stmt"/>
-      <line num="12" count="19" type="stmt"/>
-      <line num="15" count="19" type="stmt"/>
-      <line num="19" count="4" type="stmt"/>
-      <line num="25" count="0" type="stmt"/>
-      <line num="28" count="0" type="stmt"/>
-      <line num="30" count="0" type="stmt"/>
+      <metrics statements="9" coveredstatements="9" conditionals="1" coveredconditionals="0" methods="2" coveredmethods="2"/>
+      <line num="5" count="6" type="stmt"/>
+      <line num="8" count="6" type="stmt"/>
+      <line num="11" count="39" type="stmt"/>
+      <line num="12" count="39" type="stmt"/>
+      <line num="15" count="39" type="stmt"/>
+      <line num="19" count="6" type="stmt"/>
+      <line num="25" count="2" type="stmt"/>
+      <line num="28" count="2" type="stmt"/>
+      <line num="30" count="2" type="stmt"/>
     </file>
   </project>
 </coverage>
