@@ -1,5 +1,5 @@
-import { initialiseUI } from './ui.js';
+// import { initialiseUI } from './ui.js';
 
-document.addEventListener('DOMContentLoaded', () => {
-  initialiseUI();
-});
+// document.addEventListener('DOMContentLoaded', () => {
+//   initialiseUI();
+// });

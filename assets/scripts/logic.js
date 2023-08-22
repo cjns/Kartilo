@@ -34,6 +34,8 @@ function retrieveTotalQuestionNum(array) {
   return array.length;
 }
 
+
+
 export {
   shuffle,
   retrieveQuestions,
