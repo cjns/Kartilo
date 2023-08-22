@@ -40,9 +40,16 @@ function initialiseUI() {
     displayTotalQuestionNum(totalQuestionNum);
   });
 
-  // NEXT_BUTTON.addEventListener('click', () => {
-  //   // if(currentQuestionNumber > ) {}
-  // });
+  NEXT_BUTTON.addEventListener('click', () => {
+    console.log(currentQuestionNumber);
+    console.log(totalQuestionNum);
+    if(currentQuestionNumber < totalQuestionNum) {
+      displayQuestionCounter();
+      displayQuestion(currentQuestionIndex);
+    } else {
+      console.log('Quiz complete!')
+    }
+  });
 };
 
 // Add questions into the html
