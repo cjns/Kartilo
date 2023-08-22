@@ -1,13 +1,15 @@
 import {
   shuffle,
   retrieveQuestions,
-  retrieveTotalQuestionNum
+  retrieveTotalQuestionNum,
 } from './logic.js';
 
 let currentQuestionIndex = 0;
 let currentQuestionNumber = 0;
 let shuffledArray;
 let totalQuestionNum;
+let correctQuestions = 0;
+let incorrectQuestions = 0;
 
 // DOM element selections
 const SECTION_START = document.querySelector('.start');
@@ -60,10 +62,11 @@ NEXT_BUTTON.addEventListener('click', () => {
 });
 
 QUIZ_BUTTONS.forEach(button => {
-  button.addEventListener('click', () => {
+  button.addEventListener('click', (event) => {
     // Disable all buttons
     disableQuizButtons();
     enableNextButton();
+    checkAnswer(event.currentTarget);
   });
 });
 
@@ -120,6 +123,20 @@ function enableQuizButtons() {
     button.disabled = false;
   });
 }
+
+function checkAnswer(button) {
+  const spanContent = button.querySelector('.quiz__selection > span').textContent;
+  const answer = shuffledArray[currentQuestionIndex - 1].Answer;
+  console.log(shuffledArray);
+  console.log(`Question Index: ${currentQuestionIndex}`);
+  console.log(`Selection: ${spanContent}`);
+  console.log(`Answer: ${answer}`);
+  if (spanContent === answer) {
+    console.log('correct!')
+  } else {
+    console.log('incorrect!');
+  }
+};
 
 function displayTick() { }
 

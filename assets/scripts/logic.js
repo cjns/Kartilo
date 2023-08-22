@@ -22,22 +22,20 @@ function shuffle(array) {
 // Get X questions from the shuffled array. Default is 3. End is not included in slice.
 function retrieveQuestions(numberOfQuestions = 3) {
   // Shuffle the questions.
-  let shuffledArray = shuffle(JAVASCRIPT_QUIZ);
+  let shuffled = shuffle(JAVASCRIPT_QUIZ);
 
   // Return X number of questions
-  shuffledArray = shuffledArray.slice(0, numberOfQuestions);
+  shuffled = shuffled.slice(0, numberOfQuestions);
 
-  return shuffledArray;
+  return shuffled;
 };
 
 function retrieveTotalQuestionNum(array) {
   return array.length;
 }
 
-
-
 export {
   shuffle,
   retrieveQuestions,
-  retrieveTotalQuestionNum
+  retrieveTotalQuestionNum,
 };
