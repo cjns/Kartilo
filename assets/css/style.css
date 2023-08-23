@@ -1,7 +1,7 @@
 /* ============================================================ VARIABLES */
 :root {
   --box-background: hsl(100, 100%, 100%);
-  --body-background: hsl(144, 35%, 75%);
+  --body-background: #a9d6bb;
   --button-background: hsl(0, 0%, 49%);
   --button--start-font-color: hsl(144, 35%, 50%);
   --quiz-selection-background: #D9EDDF;
