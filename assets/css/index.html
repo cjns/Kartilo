@@ -22,7 +22,7 @@
     </section>
 
     <!-- The rules section -->
-    <section class="rules ">
+    <section class="rules u-inactive">
       <header class="rules__header">
         <h2 class="rules__heading">The Rules</h2>
       </header>
@@ -38,28 +38,27 @@
     </section>
 
     <!-- The question section -->
-    <section class="quiz u-inactive"> <!-- u-inactive -->
+    <section class="quiz "> <!-- u-inactive -->
       <header class="quiz__header">
         <h2 class="quiz__heading">Kartilo</h2>
-        <div class="quiz__timer">
-          <p class="quiz__timer-text">Time Left</p>
-          <p class="quiz__timer-count">15</p>
-        </div>
+        <p class="quiz__score-correct">Correct: <span>0</span></p>
+        <p class="quiz__score-incorrect">Incorrect: <span>0</span></p>
+        <p class="quiz__timer-text">Time Left: <span class="quiz__timer-count">15</span></p>
       </header>
       <div class="quiz__questions-container">
         <div class="quiz__question">
           <h3>Question</h3>
         </div>
-        <button class="quiz__selection"  data-question-id="0">
+        <button class="quiz__selection" data-question-id="0">
           <span>Option</span><i class=""></i>
         </button>
-        <button class="quiz__selection"  data-question-id="1">
+        <button class="quiz__selection" data-question-id="1">
           <span>Option</span><i class=""></i>
         </button>
-        <button class="quiz__selection"  data-question-id="2">
+        <button class="quiz__selection" data-question-id="2">
           <span>Option</span><i class=""></i>
         </button>
-        <button class="quiz__selection"  data-question-id="3">
+        <button class="quiz__selection" data-question-id="3">
           <span>Option</span><i class=""></i>
         </button>
       </div>

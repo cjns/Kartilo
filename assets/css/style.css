@@ -188,21 +188,19 @@ main {
   padding: 0.5rem 1rem;
   box-shadow: 0px 3px 5px 1px rgba(0, 0, 0, 0.1);
   border-radius: 5px 5px 0 0;
-}
-
-.quiz__timer {
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: center;
-  align-items: center;
   gap: 0.5rem;
+} 
+
+.quiz__score-correct,
+.quiz__score-incorrect,
+.quiz__timer-text {
   background-color: var(--quiz-timer-background);
   border-radius: 5px;
   padding: 0.5rem;
 }
 
-.quiz__timer-text {}
-
+.quiz__score-correct > span,
+.quiz__score-incorrect > span,
 .quiz__timer-count {
   background-color: var(--quiz-timer-count-background);
   color: var(--quiz-timer-count-color);
