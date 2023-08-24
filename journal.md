@@ -48,5 +48,7 @@
   - [ x ] Add favicon.
 - 24/08/23
   - [ x ] Add point if select question is correct.
+  - [ x ] Updating the styling for the 'continue' button.
+    - Experiment with ox-shadows, text-shadows, transition, and transform.
 
 

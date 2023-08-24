@@ -1,39 +1,41 @@
 /* ============================================================ VARIABLES */
 :root {
+  /* Sections */
   --box-background: hsl(100, 100%, 100%);
-  --body-background: #a9d6bb;
+  --body-background: hsl(144, 35%, 75%);
+  /* Buttons */
+  --button-focus-box-shadow: hsla(120, 61%, 50%, 0.4);
   --button-background: hsl(0, 0%, 49%);
-  --button--start-font-color: hsl(144, 35%, 50%);
-  --quiz-selection-background: #D9EDDF;
-  --quiz-selection-border: #A9D6BB;
+  --button-border-color: hsl(144, 35%, 65%);
+  --button-box-shadow: hsla(120, 61%, 50%, 0.4);
+    /* Start button */
+  --button-start-font-color: hsl(144, 35%, 50%);
+    /* Exit button */
   --button-exit-color: hsl(144, 62%, 25%);
   --button-exit-border: hsl(144, 62%, 25%);
+    /* Continue button */
   --button-continue-color: hsl(144, 35%, 30%);
-  --button-continue-background: linear-gradient(hsl(144, 35%, 75%), hsl(144, 35%, 65%));
+  --button-continue-background: linear-gradient(135deg, hsl(144, 35%, 75%), hsl(144, 35%, 65%));
+  --button-continue-box-shadow: hsla(0, 0%, 0%, 0.1);
   --button-continue-hover-color: hsl(100, 100%, 95%);
-  --button-continue-hover-background: linear-gradient(hsl(144, 55%, 70%), hsl(144, 55%, 65%));
+  --button-continue-hover-background: linear-gradient(135deg, hsl(144, 55%, 70%), hsl(144, 55%, 65%));
+  --button-continue-hover-box-shadow: hsla(120, 61%, 50%, 0.4);
+  --button-continue-hover-text-shadow: hsla(0, 0%, 0%, 0.2);
+  --button-continue-hover-border-color: hsl(144, 55%, 65%);
+  --button-continue-active-box-shadow: 0 1px 3px hsla(0, 0%, 0%, 0.1);
+   /* Next button */
   --button-next-color: hsl(100, 100%, 100%);
   --button-next-background: hsl(144, 35%, 75%);
   --button-next-hover-color: hsl(100, 100%, 90%);
   --button-next-hover-background: hsl(144, 45%, 70%);
-  --quiz-timer-background: #c1e4cb;
+    /* Quiz answer buttons */
+  --quiz-selection-background: #D9EDDF;
+  --quiz-selection-border: #A9D6BB;
+  --quiz-selection-hover-background: hsl(144, 35%, 75%);
+    /* Quiz timer colours */
+  --quiz-timer-background: hsl(137, 39%, 83%);
   --quiz-timer-count-background: hsl(0, 0%, 20%);
   --quiz-timer-count-color: hsl(100, 100%, 100%);
-
-  --mid: #9CB0A4;
-  --light: #A9D6BB;
-  --dark: #9CB0A4;
-  --some-blue: #8AB1F6;
-  --soft-cream: hsl(44, 72%, 93%);
-  --white: hsl(100, 100%, 100%);
-  --charcoal-grey: hsl(0, 0%, 20%);
-  --subtle-gray: hsl(0, 0%, 49%);
-  --muted-blue: hsl(212, 72%, 59%);
-  --soft-green: hsl(144, 35%, 75%);
-  --muted-red: hsl(0, 69%, 67%);
-  --golden-yellow: hsl(51, 100%, 50%);
-  --teal: hsl(174, 63%, 40%);
-  --dusty-rose: hsl(0, 41%, 69%);
 }
 
 
@@ -149,9 +151,7 @@ main {
   padding: 1rem 1rem;
 }
 
-.rules__heading {
-
-}
+.rules__heading {}
 
 .rules__list {
   padding: 1rem 1rem;
@@ -186,7 +186,7 @@ main {
   align-items: center;
   width: 100%;
   padding: 0.5rem 1rem;
-  box-shadow: 0px 3px 5px 1px rgba(0,0,0,0.1);
+  box-shadow: 0px 3px 5px 1px rgba(0, 0, 0, 0.1);
   border-radius: 5px 5px 0 0;
 }
 
@@ -201,9 +201,8 @@ main {
   padding: 0.5rem;
 }
 
-.quiz__timer-text {
-  
-}
+.quiz__timer-text {}
+
 .quiz__timer-count {
   background-color: var(--quiz-timer-count-background);
   color: var(--quiz-timer-count-color);
@@ -241,7 +240,7 @@ main {
 }
 
 .quiz__selection:hover {
-  background-color: hsl(144, 35%, 75%);
+  background-color: var(--quiz-selection-hover-background);
 }
 
 .quiz__footer {
@@ -263,51 +262,67 @@ main {
 
 .button {
   font-size: 1rem;
-  font-weight: 500;
+  font-weight: 600;
   border-radius: 5px;
   cursor: pointer;
   padding: 1rem;
+  letter-spacing: 0.7px;
+  border: 1px solid var(--button-border-color);
+  box-shadow: 
+    0 4px 6px rgba(0, 0, 0, 0.1),  /* Ambient shadow */
+    0 1px 3px rgba(0, 0, 0, 0.2),  /* Sharp shadow */
+    inset 0 0 10px rgba(255, 255, 255, 0.3);  /* Inner glow */
 }
 
 .button--start {
-  color: var(--button--start-font-color);
+  color: var(--button-start-font-color);
   font-size: 1.5rem;
-  font-weight: 500;
-  box-shadow: 0px 3px 9px 0 hsla(0, 0%, 0%, 0.2), 0px 5px 15px 0 hsla(0, 0%, 0%, 0.12);
 }
 
 .button--exit {
   color: var(--button-exit-color);
-  border: 1px solid var(--button-exit-border);
 }
 
 .button--continue {
   color: var(--button-continue-color);
   background: var(--button-continue-background);
   transition:
-    color 0.3s,
-    background 0.3s,
-    box-shadow 0.3s,
-    transform 0.2s;
+    color 0.3s ease,
+    background 0.3s ease,
+    box-shadow 0.3s ease,
+    transform 0.2s ease,
+    border-color 0.3s ease;
 }
 
 .button--continue:hover {
   color: var(--button-continue-hover-color);
   background: var(--button-continue-hover-background);
-  box-shadow: 0 0 20px 3px hsla(120, 61%, 50%, 0.4);
-  text-shadow: 1px 1px 2px hsla(0, 0%, 0%, 0.2);
-  transform: scale(1.05);
+  box-shadow: 0 0 20px 3px var(--button-continue-hover-box-shadow);
+  text-shadow: 1px 1px 2px var(--button-continue-hover-text-shadow);
+  transform: scale(1.05) translateY(-2px);
+  border-color:var(--button-continue-hover-border-color);
+}
+
+.button--continue:active {
+  transform: scale(0.98) translateY(0);
+  box-shadow: 0 1px 3px var(--button-continue-active-box-shadow);
 }
 
 .button--next {
   color: var(--button-next-color);
   background-color: var(--button-next-background);
-   
+
 }
+
 .button--next:hover {
   color: var(--button-next-hover-color);
   background-color: var(--button-next-hover-background);
-  
+
+}
+
+.button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px var(--button-focus-box-shadow);
 }
 
 /* ============================================================ UTILITY CLASSES */
