@@ -38,12 +38,15 @@
   - Encountered an issue with Jest testing because the DOM related code in script.js was executing immediately. It is is advised that I separate the logic from the DOM manipulations and then call the manipulations when the DOM is ready.
   - Separating the logic and using Common JS means I will need to use a bundler, which isn't a topic I have covered. I will try re-implementing ES6 syntax and install babel.
 - 22/08/23
-  - Added functionality to the 'next' button.
-  - Add disable/enable next button function.
-  - Add event listener to question buttons.
-    - When clicked disable all other buttons.
-    - Show correct/incorrect selection.
-    - Add point if correct.
-    - Enable next button.
+  - [ x ] Add functionality to the 'next' button.
+  - [ x ] Add disable/enable next button function.
+  - [ x ] Add event listener to question buttons.
+    - [ x ] When a selection is clicked disable all other buttons.
+    - [ x ] Enable next button.
+- 23/08/23
+  - [ x ] Show correct/incorrect selection.
+  - [ x ] Add favicon.
+- 24/08/23
+  - [ x ] Add point if select question is correct.
 
 

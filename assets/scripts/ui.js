@@ -4,6 +4,7 @@ import {
   retrieveTotalQuestionNum,
 } from './logic.js';
 
+// VARIABLES
 let currentQuestionIndex = 0;
 let currentQuestionNumber = 0;
 let shuffledArray;
@@ -11,7 +12,7 @@ let totalQuestionNum;
 let correctQuestions = 0;
 let incorrectQuestions = 0;
 
-// DOM element selections
+// DOM ELEMENT SELECTIONS
 const SECTION_START = document.querySelector('.start');
 const START_BUTTON = document.querySelector('.button.button--start');
 
@@ -26,7 +27,7 @@ const TOTAL_QUESTION_NUM = document.querySelector('.quiz__total-q');
 
 const QUIZ_BUTTONS = document.querySelectorAll('.quiz__selection');
 
-// Event listeners
+// EVENT LISTENERS
 START_BUTTON.addEventListener('click', () => {
   SECTION_START.classList.toggle('u-inactive'); // Disable the start section
   SECTION_RULES.classList.toggle('u-inactive'); // Enable the rules section
@@ -56,6 +57,7 @@ NEXT_BUTTON.addEventListener('click', () => {
     displayQuestion(currentQuestionIndex);
     enableQuizButtons();
     disableNextButton();
+    removeAllIcons();
   } else {
     console.log('Quiz complete!')
   }
@@ -66,10 +68,18 @@ QUIZ_BUTTONS.forEach(button => {
     // Disable all buttons
     disableQuizButtons();
     enableNextButton();
-    checkAnswer(event.currentTarget);
+    if (checkAnswer(event.currentTarget) === true) {
+      displayTick(event.currentTarget);
+      increaseCorrectAnswer();
+    } else {
+      displayCross(event.currentTarget);
+      increaseIncorrectAnswer();
+    };
+    showDetails();
   });
 });
 
+// FUNCTIONS
 // Add questions into the html
 function displayQuestion(index) {
   // Create an array of the possible answers.
@@ -125,22 +135,54 @@ function enableQuizButtons() {
 }
 
 function checkAnswer(button) {
-  const spanContent = button.querySelector('.quiz__selection > span').textContent;
-  const answer = shuffledArray[currentQuestionIndex - 1].Answer;
+  const SPAN_CONTENT = button.querySelector('.quiz__selection > span').textContent;
+  const ANSWER = shuffledArray[currentQuestionIndex - 1].Answer;
+  let result;
   console.log(shuffledArray);
   console.log(`Question Index: ${currentQuestionIndex}`);
-  console.log(`Selection: ${spanContent}`);
-  console.log(`Answer: ${answer}`);
-  if (spanContent === answer) {
-    console.log('correct!')
+  console.log(`Selection: ${SPAN_CONTENT}`);
+  console.log(`Answer: ${ANSWER}`);
+  if (SPAN_CONTENT === ANSWER) {
+    result = true;
   } else {
-    console.log('incorrect!');
+    result = false;
   }
+
+  return result;
 };
 
-function displayTick() { }
+function displayTick(button) {
+  button.querySelector('.quiz__selection > i').classList.add('fa-solid', 'fa-check');
+}
 
-function displayCross() { }
+function displayCross(button) {
+  button.querySelector('.quiz__selection > i').classList.add('fa-solid', 'fa-times');
+}
+
+function removeAllIcons() {
+  const ALL_BUTTONS = document.querySelectorAll('.quiz__selection > i')
+  // Loop through all the buttons and remove the font awesome classes.
+  for(let i = 0; i < ALL_BUTTONS.length; i++) {
+    ALL_BUTTONS[i].classList.remove('fa-solid', 'fa-times', 'fa-check');
+  }
+}
+
+function showDetails() {
+  console.log(`Question Index: ${currentQuestionIndex}`);
+  console.log(`Question Number: ${currentQuestionNumber}`);
+  console.log(`Total Questions: ${totalQuestionNum}`);
+  console.log(`Shuffled Array: ${shuffledArray}`);
+  console.log(`Correct Questions: ${correctQuestions}`);
+  console.log(`Incorrect Questions: ${incorrectQuestions}`);
+};
+
+function increaseCorrectAnswer() {
+  ++correctQuestions;
+}
+
+function increaseIncorrectAnswer() {
+  ++incorrectQuestions;
+}
 
 export {
   displayQuestion,
@@ -151,5 +193,9 @@ export {
   disableQuizButtons,
   enableQuizButtons,
   displayTick,
-  displayCross
+  displayCross,
+  removeAllIcons,
+  showDetails,
+  increaseCorrectAnswer,
+  increaseIncorrectAnswer
 };
