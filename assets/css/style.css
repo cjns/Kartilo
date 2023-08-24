@@ -8,8 +8,14 @@
   --quiz-selection-border: #A9D6BB;
   --button-exit-color: hsl(144, 62%, 25%);
   --button-exit-border: hsl(144, 62%, 25%);
-  --button-continue-color: hsl(100, 100%, 100%);
-  --button-continue-background: hsl(144, 35%, 75%);
+  --button-continue-color: hsl(144, 35%, 30%);
+  --button-continue-background: linear-gradient(hsl(144, 35%, 75%), hsl(144, 35%, 65%));
+  --button-continue-hover-color: hsl(100, 100%, 95%);
+  --button-continue-hover-background: linear-gradient(hsl(144, 55%, 70%), hsl(144, 55%, 65%));
+  --button-next-color: hsl(100, 100%, 100%);
+  --button-next-background: hsl(144, 35%, 75%);
+  --button-next-hover-color: hsl(100, 100%, 90%);
+  --button-next-hover-background: hsl(144, 45%, 70%);
   --quiz-timer-background: #c1e4cb;
   --quiz-timer-count-background: hsl(0, 0%, 20%);
   --quiz-timer-count-color: hsl(100, 100%, 100%);
@@ -275,10 +281,33 @@ main {
   border: 1px solid var(--button-exit-border);
 }
 
-.button--continue,
-.button--next {
+.button--continue {
   color: var(--button-continue-color);
-  background-color: var(--button-continue-background);
+  background: var(--button-continue-background);
+  transition:
+    color 0.3s,
+    background 0.3s,
+    box-shadow 0.3s,
+    transform 0.2s;
+}
+
+.button--continue:hover {
+  color: var(--button-continue-hover-color);
+  background: var(--button-continue-hover-background);
+  box-shadow: 0 0 20px 3px hsla(120, 61%, 50%, 0.4);
+  text-shadow: 1px 1px 2px hsla(0, 0%, 0%, 0.2);
+  transform: scale(1.05);
+}
+
+.button--next {
+  color: var(--button-next-color);
+  background-color: var(--button-next-background);
+   
+}
+.button--next:hover {
+  color: var(--button-next-hover-color);
+  background-color: var(--button-next-hover-background);
+  
 }
 
 /* ============================================================ UTILITY CLASSES */

@@ -50,8 +50,6 @@ CONTINUE_BUTTON.addEventListener('click', () => {
 });
 
 NEXT_BUTTON.addEventListener('click', () => {
-  console.log(currentQuestionNumber);
-  console.log(totalQuestionNum);
   if (currentQuestionNumber < totalQuestionNum) {
     displayQuestionCounter();
     displayQuestion(currentQuestionIndex);
@@ -138,8 +136,7 @@ function checkAnswer(button) {
   const SPAN_CONTENT = button.querySelector('.quiz__selection > span').textContent;
   const ANSWER = shuffledArray[currentQuestionIndex - 1].Answer;
   let result;
-  console.log(shuffledArray);
-  console.log(`Question Index: ${currentQuestionIndex}`);
+  console.table(shuffledArray);
   console.log(`Selection: ${SPAN_CONTENT}`);
   console.log(`Answer: ${ANSWER}`);
   if (SPAN_CONTENT === ANSWER) {
