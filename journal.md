@@ -50,8 +50,8 @@
   - [ x ] Add point if select question is correct.
   - [ x ] Updating the styling for the 'continue' button.
     - Experiment with box-shadows, text-shadows, transition, and transform.
-- 25/08/23
-  - [ ] Add index.html to root
+- 26/08/23
+  - [ x ] Add index.html to root
   - [ ] Remove commented out code
   - [ ] Remove unused code
   - [ ] leave tests for now and work on finished modal
@@ -61,7 +61,9 @@
   - [ ] remove main.js
   - [ ] remove fallbackquiz or allquestions - only keep one
   - [ ] Contrast: Accessibility/WAVE: accessible and color contrast.
-- 26/08/23
+  - [ ] Upload sitemap
+  - [ ] Upload wireframes
+- 27/08/23
   - [ ] README - Evaluate
   - [ ] Testing
     - [ ] JShint Validation

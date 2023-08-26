@@ -13,22 +13,22 @@ let correctQuestions = 0;
 let incorrectQuestions = 0;
 
 // DOM ELEMENT SELECTIONS
+// Start Modal
 const SECTION_START = document.querySelector('.start');
 const START_BUTTON = document.querySelector('.button.button--start');
-
+// Rules Modal
 const SECTION_RULES = document.querySelector('.rules');
 const EXIT_BUTTON = document.querySelector('.button.button--exit');
 const CONTINUE_BUTTON = document.querySelector('.button.button--continue');
-
+// Quiz Modal
 const SECTION_QUIZ = document.querySelector('.quiz');
 const NEXT_BUTTON = document.querySelector('.button.button--next');
 const CURRENT_QUESTION_NUM = document.querySelector('.quiz__current-q');
 const TOTAL_QUESTION_NUM = document.querySelector('.quiz__total-q');
-
 const QUIZ_BUTTONS = document.querySelectorAll('.quiz__selection');
-
 const CORRECT_ANSWERS = document.querySelector('.quiz__score-correct > span');
 const INCORRECT_ANSWERS = document.querySelector('.quiz__score-incorrect > span');
+
 
 // EVENT LISTENERS
 START_BUTTON.addEventListener('click', () => {
@@ -151,14 +151,17 @@ function checkAnswer(button) {
   return result;
 };
 
+// Display the tick icon on a correct answer.
 function displayTick(button) {
   button.querySelector('.quiz__selection > i').classList.add('fa-solid', 'fa-check');
 }
 
+// Display the cross icon on an incorrect answer.
 function displayCross(button) {
   button.querySelector('.quiz__selection > i').classList.add('fa-solid', 'fa-times');
 }
 
+// Remove/reset all icons.
 function removeAllIcons() {
   const ALL_BUTTONS = document.querySelectorAll('.quiz__selection > i')
   // Loop through all the buttons and remove the font awesome classes.
@@ -166,6 +169,7 @@ function removeAllIcons() {
     ALL_BUTTONS[i].classList.remove('fa-solid', 'fa-times', 'fa-check');
   }
 }
+
 
 function showDetails() {
   console.log(`Question Index: ${currentQuestionIndex}`);
