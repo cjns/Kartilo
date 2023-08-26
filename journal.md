@@ -49,6 +49,26 @@
 - 24/08/23
   - [ x ] Add point if select question is correct.
   - [ x ] Updating the styling for the 'continue' button.
-    - Experiment with ox-shadows, text-shadows, transition, and transform.
+    - Experiment with box-shadows, text-shadows, transition, and transform.
+- 25/08/23
+  - [ ] Add index.html to root
+  - [ ] Remove commented out code
+  - [ ] Remove unused code
+  - [ ] leave tests for now and work on finished modal
+  - [ ] remove all console logs on each file
+  - [ ] Comment functions
+  - [ ] beautify correct/incorrect answers
+  - [ ] remove main.js
+  - [ ] remove fallbackquiz or allquestions - only keep one
+  - [ ] Contrast: Accessibility/WAVE: accessible and color contrast.
+- 26/08/23
+  - [ ] README - Evaluate
+  - [ ] Testing
+    - [ ] JShint Validation
+    - [ ] HTML Validation
+    - [ ] CSS Validate
+    - [ ] Console errors
+  - [ ] experiment with api
+  - [ ] Timer / Difficulty
 
 

@@ -27,6 +27,9 @@ const TOTAL_QUESTION_NUM = document.querySelector('.quiz__total-q');
 
 const QUIZ_BUTTONS = document.querySelectorAll('.quiz__selection');
 
+const CORRECT_ANSWERS = document.querySelector('.quiz__score-correct > span');
+const INCORRECT_ANSWERS = document.querySelector('.quiz__score-incorrect > span');
+
 // EVENT LISTENERS
 START_BUTTON.addEventListener('click', () => {
   SECTION_START.classList.toggle('u-inactive'); // Disable the start section
@@ -174,11 +177,11 @@ function showDetails() {
 };
 
 function increaseCorrectAnswer() {
-  ++correctQuestions;
+  CORRECT_ANSWERS.innerHTML = ++correctQuestions;
 }
 
 function increaseIncorrectAnswer() {
-  ++incorrectQuestions;
+  INCORRECT_ANSWERS.innerHTML = ++incorrectQuestions;
 }
 
 export {
