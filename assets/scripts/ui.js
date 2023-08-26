@@ -28,14 +28,18 @@ const TOTAL_QUESTION_NUM = document.querySelector('.quiz__total-q');
 const QUIZ_BUTTONS = document.querySelectorAll('.quiz__selection');
 const CORRECT_ANSWERS = document.querySelector('.quiz__score-correct > span');
 const INCORRECT_ANSWERS = document.querySelector('.quiz__score-incorrect > span');
-
+// The-End Modal
+const THE_END_SCORE = document.querySelector('.the-end__score');
+const THE_END_TOTAL = document.querySelector('.the-end__total');
 
 // EVENT LISTENERS
+// Start Modal
 START_BUTTON.addEventListener('click', () => {
   SECTION_START.classList.toggle('u-inactive'); // Disable the start section
   SECTION_RULES.classList.toggle('u-inactive'); // Enable the rules section
 });
 
+// Rules Modal
 EXIT_BUTTON.addEventListener('click', () => {
   SECTION_START.classList.toggle('u-inactive'); // Enable the start section
   SECTION_RULES.classList.toggle('u-inactive'); // Disable the rules section
@@ -52,6 +56,7 @@ CONTINUE_BUTTON.addEventListener('click', () => {
   disableNextButton();
 });
 
+// Quiz Modal
 NEXT_BUTTON.addEventListener('click', () => {
   if (currentQuestionNumber < totalQuestionNum) {
     displayQuestionCounter();
@@ -80,6 +85,9 @@ QUIZ_BUTTONS.forEach(button => {
   });
 });
 
+// The-End Modal
+
+
 // FUNCTIONS
 // Add questions into the html
 function displayQuestion(index) {
@@ -95,7 +103,7 @@ function displayQuestion(index) {
   let randomDataQuestionIdRange = shuffle(dataQuestionIdRange);
   // Set question title
   document.querySelector('.quiz__question h3').innerHTML = `${index + 1}. ${shuffledArray[index].Question}`;
-  // Loop through the randomDataQuestionIdRange indices
+  // Loop through the randomDataQuestionIdRange indices.
   for (let i = 0; i <= 3; i++) {
     document.querySelector(`[data-question-id="${randomDataQuestionIdRange[i]}"] > span`).innerHTML = options[i];
 
@@ -104,37 +112,42 @@ function displayQuestion(index) {
   currentQuestionIndex++;
 };
 
-// Display question counter
+// Display the question counter.
 function displayQuestionCounter() {
   currentQuestionNumber++;
   return document.querySelector('.quiz__current-q').innerHTML = currentQuestionNumber;
 }
 
-// Display total number of questions
+// Display the total number of questions.
 function displayTotalQuestionNum(num) {
   return document.querySelector('.quiz__total-q').innerHTML = num;
 }
 
+// Disable the next button.
 function disableNextButton() {
   document.querySelector('.button--next').disabled = true;
 }
 
+// Enable the next button.
 function enableNextButton() {
   document.querySelector('.button--next').disabled = false;
 }
 
+// Disable the quiz answer buttons.
 function disableQuizButtons() {
   QUIZ_BUTTONS.forEach(button => {
     button.disabled = true;
   });
 }
 
+// Enable the quiz answer buttons.
 function enableQuizButtons() {
   QUIZ_BUTTONS.forEach(button => {
     button.disabled = false;
   });
 }
 
+// Check the selected answer.
 function checkAnswer(button) {
   const SPAN_CONTENT = button.querySelector('.quiz__selection > span').textContent;
   const ANSWER = shuffledArray[currentQuestionIndex - 1].Answer;
@@ -170,7 +183,7 @@ function removeAllIcons() {
   }
 }
 
-
+// Display these for test purposes.
 function showDetails() {
   console.log(`Question Index: ${currentQuestionIndex}`);
   console.log(`Question Number: ${currentQuestionNumber}`);
@@ -180,10 +193,12 @@ function showDetails() {
   console.log(`Incorrect Questions: ${incorrectQuestions}`);
 };
 
+// Increase the correct answer counter.
 function increaseCorrectAnswer() {
   CORRECT_ANSWERS.innerHTML = ++correctQuestions;
 }
 
+// Increase the incorrect answer counter.
 function increaseIncorrectAnswer() {
   INCORRECT_ANSWERS.innerHTML = ++incorrectQuestions;
 }

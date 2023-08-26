@@ -52,7 +52,7 @@
 @font-face {
   font-family: "Roboto Flex";
   src:
-    url("../fonts/roboto-flex.woff2") format("woff2"),
+    url("/assets/fonts/roboto-flex.woff2") format("woff2"),
     local("sans-serif");
   font-style: normal;
   font-weight: 100 1000;
@@ -98,7 +98,7 @@ h3 {
 /* ============================================================ <MAIN> */
 main {
   display: flex;
-  flex-flow: column nowrap;
+  flex-flow: column wrap;
   justify-content: center;
   align-content: center;
   align-items: center;
@@ -113,7 +113,7 @@ main {
 .the-end {
   position: absolute;
   display: flex;
-  flex-flow: column nowrap;
+  flex-flow: column wrap;
   justify-content: center;
   align-content: center;
   align-items: center;
@@ -203,7 +203,7 @@ main {
 
 .quiz__question {
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: row wrap;
   justify-content: flex-start;
   align-items: flex-end;
   padding: 1rem 0;
@@ -211,7 +211,7 @@ main {
 
 .quiz__questions-container {
   display: flex;
-  flex-flow: column nowrap;
+  flex-flow: column wrap;
   justify-content: center;
   align-items: stretch;
   width: 100%;
@@ -221,7 +221,7 @@ main {
 
 .quiz__selection {
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: row wrap;
   justify-content: space-between;
   padding: 1rem;
   background-color: var(--quiz-selection-background);
@@ -245,27 +245,58 @@ main {
 
 .quiz__progress {
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: row wrap;
   gap: 0.5rem;
 }
 
 /* The-End Modal */
 .the-end {
   width: 600px;
-  padding: 3rem;
 }
 
 .the-end__header {
   text-align: center;
-  padding-bottom: 1rem;
+  padding: 1rem;
 }
 
 .the-end__container {
   text-align: center;
+  padding: 1rem;
 }
 
 .the-end__final-score {
   margin-bottom: 1rem;
+}
+
+.the-end__footer {
+  padding: 1rem;
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content:space-between;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* ============================================================ MODAL MEDIA QUERIES */
+@media (max-width: 575px) {
+  .quiz__header {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    gap: 1rem 0.5rem;
+  }
+}
+
+@media (max-width: 379px) {
+  .quiz__footer,
+  .quiz__footer,
+  .rules__footer {
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem 0.5rem;
+  }
 }
 
 /* ============================================================ BUTTONS */
@@ -284,6 +315,11 @@ main {
     /* Sharp shadow */
     inset 0 0 10px rgba(255, 255, 255, 0.3);
   /* Inner glow */
+}
+
+.button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px var(--button-focus-box-shadow);
 }
 
 /* Start Modal: Start Button */
@@ -336,10 +372,7 @@ main {
 
 }
 
-.button:focus {
-  outline: none;
-  box-shadow: 0 0 0 3px var(--button-focus-box-shadow);
-}
+/* The-End Modal:  */
 
 /* ============================================================ UTILITY CLASSES */
 .u-active {
