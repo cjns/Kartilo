@@ -1,4 +1,4 @@
-import { JAVASCRIPT_QUIZ } from '../scripts/fallbackQuiz.js';
+import { javaScriptQuiz } from '../scripts/fallbackQuiz.js';
 
 // Fisher-Yates Shuffle adapted from https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array
 function shuffle(array) {
@@ -22,14 +22,15 @@ function shuffle(array) {
 // Get X questions from the shuffled array. Default is 3. End is not included in slice.
 function retrieveQuestions(numberOfQuestions = 3) {
   // Shuffle the questions.
-  let shuffled = shuffle(JAVASCRIPT_QUIZ);
+  let shuffled = shuffle(javaScriptQuiz);
 
   // Return X number of questions
   shuffled = shuffled.slice(0, numberOfQuestions);
 
   return shuffled;
-};
+}
 
+// Retrieve the length of the questions array.
 function retrieveTotalQuestionNum(array) {
   return array.length;
 }

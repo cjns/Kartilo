@@ -1,4 +1,4 @@
-const JAVASCRIPT_QUIZ = [
+const javaScriptQuiz = [
   {
     Question:
       "In JavaScript, if let x='Prakhar', then what will be the result for console.log(x.substring(2,5))?",
@@ -110,5 +110,5 @@ const JAVASCRIPT_QUIZ = [
 ];
 
 export {
-  JAVASCRIPT_QUIZ
+  javaScriptQuiz
 };

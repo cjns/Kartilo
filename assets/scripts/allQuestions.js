@@ -1,4 +1,4 @@
-const ALL_JAVASCRIPT_QUESTIONS = [
+const allJavaScriptQuestions = [
   {
     Question:
       "In JavaScript, if let x='Prakhar', then what will be the result for console.log(x.substring(2,5))?",
@@ -1993,4 +1993,4 @@ const ALL_JAVASCRIPT_QUESTIONS = [
   }
 ];
 
-export default ALL_JAVASCRIPT_QUESTIONS;
+export default allJavaScriptQuestions;
