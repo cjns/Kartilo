@@ -166,17 +166,17 @@ function checkAnswer(button) {
 
 // Display the tick icon on a correct answer.
 function displayTick(button) {
-  button.querySelector('.quiz__selection > i').classList.add('fa-solid', 'fa-check');
+  button.querySelector('i').classList.add('fa-solid', 'fa-check');
 }
 
 // Display the cross icon on an incorrect answer.
 function displayCross(button) {
-  button.querySelector('.quiz__selection > i').classList.add('fa-solid', 'fa-times');
+  button.querySelector('i').classList.add('fa-solid', 'fa-times');
 }
 
 // Remove/reset all icons.
 function removeAllIcons() {
-  const ALL_BUTTONS = document.querySelectorAll('.quiz__selection > i')
+  const ALL_BUTTONS = document.querySelectorAll('.quiz__selection i')
   // Loop through all the buttons and remove the font awesome classes.
   for(let i = 0; i < ALL_BUTTONS.length; i++) {
     ALL_BUTTONS[i].classList.remove('fa-solid', 'fa-times', 'fa-check');

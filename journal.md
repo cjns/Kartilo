@@ -52,18 +52,19 @@
     - Experiment with box-shadows, text-shadows, transition, and transform.
 - 26/08/23
   - [ x ] Add index.html to root
+  - [ x ] Comment functions
+  - [ x ] Remove main.js
+  - [ x ] Add 'the-end' modal.
+- 27/08/23
+  - [ ] Upload wireframes
+  - [ ] Upload sitemap
+  - [ ] Contrast: Accessibility/WAVE: accessible and color contrast.
+  - [ ] remove fallbackquiz or allquestions - only keep one
+  - [ ] beautify correct/incorrect answers
+  - [ ] remove all console logs on each file
+  - [ ] leave tests for now and work on finished modal
   - [ ] Remove commented out code
   - [ ] Remove unused code
-  - [ ] leave tests for now and work on finished modal
-  - [ ] remove all console logs on each file
-  - [ ] Comment functions
-  - [ ] beautify correct/incorrect answers
-  - [ ] remove main.js
-  - [ ] remove fallbackquiz or allquestions - only keep one
-  - [ ] Contrast: Accessibility/WAVE: accessible and color contrast.
-  - [ ] Upload sitemap
-  - [ ] Upload wireframes
-- 27/08/23
   - [ ] README - Evaluate
   - [ ] Testing
     - [ ] JShint Validation
