@@ -1,3 +1,4 @@
+//  Taken from freeCodeCamp Developer Quiz at https://github.com/freeCodeCamp/Developer_Quiz_Site/blob/main/src/data/javascript-quiz.ts
 const allJavaScriptQuestions = [
   {
     Question:
@@ -1993,4 +1994,4 @@ const allJavaScriptQuestions = [
   }
 ];
 
-export default allJavaScriptQuestions;
+export { allJavaScriptQuestions };

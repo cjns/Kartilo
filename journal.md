@@ -61,8 +61,9 @@
   - [ x ] Upload sitemap.
   - [ x ] Complete 'the-end' modal.
     - [ x ] Reset score function for start and replay.
+  - [ ] Consider changing final 'the-end' message based on the score.  
   - [ ] Contrast: Accessibility/WAVE: accessible and color contrast.
-  - [ ] remove fallbackquiz.js or allquestions.js - only keep one.
+  - [ x ] Keep allquestions.js.
   - [ ] remove all console logs on each file.
   - [ ] Remove commented out code.
   - [ ] Remove unused code.
