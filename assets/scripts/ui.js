@@ -9,8 +9,8 @@ let currentQuestionIndex = 0;
 let currentQuestionNumber = 0;
 let shuffledArray;
 let totalQuestionNum;
-let correctQuestions = 0;
-let incorrectQuestions = 0;
+let correctAnswers = 0;
+let incorrectAnswers = 0;
 
 // DOM ELEMENT SELECTIONS
 // Start Modal
@@ -49,6 +49,9 @@ rulesExitButton.addEventListener('click', () => {
 });
 
 rulesContinueButton.addEventListener('click', () => {
+  clearScore();
+  removeAllIcons();
+  enableQuizButtons();
   disableElement(sectionRules);
   activateElement(sectionQuiz);
   shuffledArray = retrieveQuestions();
@@ -68,8 +71,9 @@ quizNextButton.addEventListener('click', () => {
     disableNextButton();
     removeAllIcons();
   } else {
-    sectionQuiz
-    theEndSection
+    disableElement(sectionQuiz);
+    activateElement(theEndSection);
+    showFinalScore();
   }
 });
 
@@ -90,7 +94,15 @@ quizSelectionButtons.forEach(button => {
 });
 
 // The-End Modal
+theEndQuitButton.addEventListener('click', () => {
+  disableElement(theEndSection);
+  activateElement(sectionStart);
+});
 
+theEndReplayButton.addEventListener('click', () => {
+  disableElement(theEndSection);
+  activateElement(sectionRules);
+});
 
 // FUNCTIONS
 // Add questions into the html
@@ -114,7 +126,7 @@ function displayQuestion(index) {
   };
 
   currentQuestionIndex++;
-};
+}
 
 // Display the question counter.
 function displayQuestionCounter() {
@@ -166,7 +178,7 @@ function checkAnswer(button) {
   }
 
   return result;
-};
+}
 
 // Display the tick icon on a correct answer.
 function displayTick(button) {
@@ -193,28 +205,42 @@ function showDetails() {
   console.log(`Question Number: ${currentQuestionNumber}`);
   console.log(`Total Questions: ${totalQuestionNum}`);
   console.log(`Shuffled Array: ${shuffledArray}`);
-  console.log(`Correct Questions: ${correctQuestions}`);
-  console.log(`Incorrect Questions: ${incorrectQuestions}`);
-};
+  console.log(`Correct Questions: ${correctAnswers}`);
+  console.log(`Incorrect Questions: ${incorrectAnswers}`);
+}
 
 // Increase the correct answer counter.
 function increaseCorrectAnswer() {
-  quizCorrectAnswers.innerHTML = ++correctQuestions;
+  quizCorrectAnswers.innerHTML = ++correctAnswers;
 }
 
 // Increase the incorrect answer counter.
 function increaseIncorrectAnswer() {
-  quizIncorrectAnswers.innerHTML = ++incorrectQuestions;
+  quizIncorrectAnswers.innerHTML = ++incorrectAnswers;
 }
 
 // Add u-inactive class, which disables the element.
 function disableElement(element) {
   element.classList.add('u-inactive');
-};
+}
 
 // Disable u-inactive class, which enables the element.
 function activateElement(element) {
   element.classList.remove('u-inactive');
+}
+
+function showFinalScore() {
+  theEndScore.innerHTML = correctAnswers;
+  theEndTotal.innerHTML = totalQuestionNum;
+}
+
+function clearScore() {
+  correctAnswers = 0;
+  quizCorrectAnswers.innerHTML = correctAnswers;
+  incorrectAnswers = 0;
+  quizIncorrectAnswers.innerHTML = incorrectAnswers;
+  currentQuestionIndex = 0;
+  currentQuestionNumber = 0;
 }
 
 export {
