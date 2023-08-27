@@ -38,19 +38,19 @@ const theEndReplayButton = document.querySelector('.button-replay');
 // EVENT LISTENERS
 // Start Modal
 startButton.addEventListener('click', () => {
-  sectionStart.classList.toggle('u-inactive'); // Disable the start section
-  sectionRules.classList.toggle('u-inactive'); // Enable the rules section
+  disableElement(sectionStart);
+  activateElement(sectionRules);
 });
 
 // Rules Modal
 rulesExitButton.addEventListener('click', () => {
-  sectionStart.classList.toggle('u-inactive'); // Enable the start section
-  sectionRules.classList.toggle('u-inactive'); // Disable the rules section
+  disableElement(sectionRules);
+  activateElement(sectionStart);
 });
 
 rulesContinueButton.addEventListener('click', () => {
-  sectionRules.classList.toggle('u-inactive'); // Disable the rules section
-  sectionQuiz.classList.toggle('u-inactive'); // Enable the quiz section
+  disableElement(sectionRules);
+  activateElement(sectionQuiz);
   shuffledArray = retrieveQuestions();
   totalQuestionNum = retrieveTotalQuestionNum(shuffledArray);
   displayQuestion(currentQuestionIndex);
@@ -182,7 +182,7 @@ function displayCross(button) {
 function removeAllIcons() {
   const allButtons = document.querySelectorAll('.quiz__selection i')
   // Loop through all the buttons and remove the font awesome classes.
-  for(let i = 0; i < allButtons.length; i++) {
+  for (let i = 0; i < allButtons.length; i++) {
     allButtons[i].classList.remove('fa-solid', 'fa-times', 'fa-check');
   }
 }
@@ -205,6 +205,16 @@ function increaseCorrectAnswer() {
 // Increase the incorrect answer counter.
 function increaseIncorrectAnswer() {
   quizIncorrectAnswers.innerHTML = ++incorrectQuestions;
+}
+
+// Add u-inactive class, which disables the element.
+function disableElement(element) {
+  element.classList.add('u-inactive');
+};
+
+// Disable u-inactive class, which enables the element.
+function activateElement(element) {
+  element.classList.remove('u-inactive');
 }
 
 export {
