@@ -89,7 +89,10 @@ Ensure there is sufficient contract between the text and background.
 ### Backgrounds
 ### Card images
 ### Wireframes
-
+[Start Modal](/assets/images/start-screen.webp)
+[Rules Modal](/assets/images/rules.webp)
+[Quiz Modal](/assets/images/quiz.webp)
+[Final Modal](/assets/images/the-end.webp)
 ## Features
 ### Future implementations
 ## Technologies Used

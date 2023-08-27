@@ -56,11 +56,11 @@
   - [ x ] Remove main.js
   - [ x ] Add 'the-end' modal.
 - 27/08/23
-  - [ ] Upload wireframes
+  - [ x ] beautify correct/incorrect answers
+  - [ x ] Upload wireframes
   - [ ] Upload sitemap
   - [ ] Contrast: Accessibility/WAVE: accessible and color contrast.
   - [ ] remove fallbackquiz or allquestions - only keep one
-  - [ ] beautify correct/incorrect answers
   - [ ] remove all console logs on each file
   - [ ] leave tests for now and work on finished modal
   - [ ] Remove commented out code
