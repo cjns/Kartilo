@@ -51,21 +51,21 @@
   - [ x ] Updating the styling for the 'continue' button.
     - Experiment with box-shadows, text-shadows, transition, and transform.
 - 26/08/23
-  - [ x ] Add index.html to root
-  - [ x ] Comment functions
+  - [ x ] Add index.html to root.
+  - [ x ] Comment functions.
   - [ x ] Remove main.js
   - [ x ] Add 'the-end' modal.
 - 27/08/23
-  - [ x ] beautify correct/incorrect answers
-  - [ x ] Upload wireframes
-  - [ x ] Upload sitemap
+  - [ x ] beautify correct/incorrect answers.
+  - [ x ] Upload wireframes.
+  - [ x ] Upload sitemap.
+  - [ ] leave tests for now and work on 'the-end' modal.
   - [ ] Contrast: Accessibility/WAVE: accessible and color contrast.
-  - [ ] remove fallbackquiz or allquestions - only keep one
-  - [ ] remove all console logs on each file
-  - [ ] leave tests for now and work on finished modal
-  - [ ] Remove commented out code
-  - [ ] Remove unused code
-  - [ ] README - Evaluate
+  - [ ] remove fallbackquiz.js or allquestions.js - only keep one.
+  - [ ] remove all console logs on each file.
+  - [ ] Remove commented out code.
+  - [ ] Remove unused code.
+  - [ ] README - Evaluate.
   - [ ] Testing
     - [ ] JShint Validation
     - [ ] HTML Validation
@@ -73,5 +73,7 @@
     - [ ] Console errors
   - [ ] experiment with api
   - [ ] Timer / Difficulty
+- 28/08/23
+
 
 

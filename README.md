@@ -88,6 +88,8 @@ Ensure there is sufficient contract between the text and background.
 ### Styling
 ### Backgrounds
 ### Card images
+### Sitemap
+[Sitemap / Modal flow](/assets/images/sitemap-modal-flow.webp)
 ### Wireframes
 [Start Modal](/assets/images/start-screen.webp)
 [Rules Modal](/assets/images/rules.webp)
