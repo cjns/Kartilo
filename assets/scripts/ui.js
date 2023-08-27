@@ -29,8 +29,11 @@ const QUIZ_BUTTONS = document.querySelectorAll('.quiz__selection');
 const CORRECT_ANSWERS = document.querySelector('.quiz__score-correct > span');
 const INCORRECT_ANSWERS = document.querySelector('.quiz__score-incorrect > span');
 // The-End Modal
+const THE_END_MODAL = document.querySelector('.the-end');
 const THE_END_SCORE = document.querySelector('.the-end__score');
 const THE_END_TOTAL = document.querySelector('.the-end__total');
+const THE_END_QUIT = document.querySelector('.button-quit');
+const THE_END_REPLAY = document.querySelector('.button-replay');
 
 // EVENT LISTENERS
 // Start Modal
@@ -115,12 +118,12 @@ function displayQuestion(index) {
 // Display the question counter.
 function displayQuestionCounter() {
   currentQuestionNumber++;
-  return document.querySelector('.quiz__current-q').innerHTML = currentQuestionNumber;
+  return CURRENT_QUESTION_NUM.innerHTML = currentQuestionNumber;
 }
 
 // Display the total number of questions.
 function displayTotalQuestionNum(num) {
-  return document.querySelector('.quiz__total-q').innerHTML = num;
+  return TOTAL_QUESTION_NUM.innerHTML = num;
 }
 
 // Disable the next button.
