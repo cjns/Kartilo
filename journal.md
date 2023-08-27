@@ -58,7 +58,7 @@
 - 27/08/23
   - [ x ] beautify correct/incorrect answers
   - [ x ] Upload wireframes
-  - [ ] Upload sitemap
+  - [ x ] Upload sitemap
   - [ ] Contrast: Accessibility/WAVE: accessible and color contrast.
   - [ ] remove fallbackquiz or allquestions - only keep one
   - [ ] remove all console logs on each file
