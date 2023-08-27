@@ -1,8 +1,8 @@
 import {
   shuffle,
   retrieveQuestions,
-  retrieveTotalQuestionNum,
-} from './logic.js';
+  retrieveTotalQuestionNum
+} from "./logic.js";
 
 // VARIABLES
 let currentQuestionIndex = 0;
@@ -14,41 +14,41 @@ let incorrectAnswers = 0;
 
 // DOM ELEMENT SELECTIONS
 // Start Modal
-const sectionStart = document.querySelector('.start');
-const startButton = document.querySelector('.button.button--start');
+const sectionStart = document.querySelector(".start");
+const startButton = document.querySelector(".button.button--start");
 // Rules Modal
-const sectionRules = document.querySelector('.rules');
-const rulesExitButton = document.querySelector('.button.button--exit');
-const rulesContinueButton = document.querySelector('.button.button--continue');
+const sectionRules = document.querySelector(".rules");
+const rulesExitButton = document.querySelector(".button.button--exit");
+const rulesContinueButton = document.querySelector(".button.button--continue");
 // Quiz Modal
-const sectionQuiz = document.querySelector('.quiz');
-const quizNextButton = document.querySelector('.button.button--next');
-const quizCurrentQuestion = document.querySelector('.quiz__current-q');
-const quizTotalQuestions = document.querySelector('.quiz__total-q');
-const quizSelectionButtons = document.querySelectorAll('.quiz__selection');
-const quizCorrectAnswers = document.querySelector('.quiz__score-correct > span');
-const quizIncorrectAnswers = document.querySelector('.quiz__score-incorrect > span');
+const sectionQuiz = document.querySelector(".quiz");
+const quizNextButton = document.querySelector(".button.button--next");
+const quizCurrentQuestion = document.querySelector(".quiz__current-q");
+const quizTotalQuestions = document.querySelector(".quiz__total-q");
+const quizSelectionButtons = document.querySelectorAll(".quiz__selection");
+const quizCorrectAnswers = document.querySelector(".quiz__score-correct > span");
+const quizIncorrectAnswers = document.querySelector(".quiz__score-incorrect > span");
 // The-End Modal
-const theEndSection = document.querySelector('.the-end');
-const theEndScore = document.querySelector('.the-end__score');
-const theEndTotal = document.querySelector('.the-end__total');
-const theEndQuitButton = document.querySelector('.button-quit');
-const theEndReplayButton = document.querySelector('.button-replay');
+const theEndSection = document.querySelector(".the-end");
+const theEndScore = document.querySelector(".the-end__score");
+const theEndTotal = document.querySelector(".the-end__total");
+const theEndQuitButton = document.querySelector(".button-quit");
+const theEndReplayButton = document.querySelector(".button-replay");
 
 // EVENT LISTENERS
 // Start Modal
-startButton.addEventListener('click', () => {
+startButton.addEventListener("click", () => {
   disableElement(sectionStart);
   activateElement(sectionRules);
 });
 
 // Rules Modal
-rulesExitButton.addEventListener('click', () => {
+rulesExitButton.addEventListener("click", () => {
   disableElement(sectionRules);
   activateElement(sectionStart);
 });
 
-rulesContinueButton.addEventListener('click', () => {
+rulesContinueButton.addEventListener("click", () => {
   clearScore();
   removeAllIcons();
   enableQuizButtons();
@@ -63,7 +63,7 @@ rulesContinueButton.addEventListener('click', () => {
 });
 
 // Quiz Modal
-quizNextButton.addEventListener('click', () => {
+quizNextButton.addEventListener("click", () => {
   if (currentQuestionNumber < totalQuestionNum) {
     displayQuestionCounter();
     displayQuestion(currentQuestionIndex);
@@ -77,8 +77,8 @@ quizNextButton.addEventListener('click', () => {
   }
 });
 
-quizSelectionButtons.forEach(button => {
-  button.addEventListener('click', (event) => {
+quizSelectionButtons.forEach((button) => {
+  button.addEventListener("click", (event) => {
     // Disable all buttons
     disableQuizButtons();
     enableNextButton();
@@ -88,18 +88,18 @@ quizSelectionButtons.forEach(button => {
     } else {
       displayCross(event.currentTarget);
       increaseIncorrectAnswer();
-    };
+    }
     showDetails();
   });
 });
 
 // The-End Modal
-theEndQuitButton.addEventListener('click', () => {
+theEndQuitButton.addEventListener("click", () => {
   disableElement(theEndSection);
   activateElement(sectionStart);
 });
 
-theEndReplayButton.addEventListener('click', () => {
+theEndReplayButton.addEventListener("click", () => {
   disableElement(theEndSection);
   activateElement(sectionRules);
 });
@@ -118,12 +118,12 @@ function displayQuestion(index) {
   let dataQuestionIdRange = [0, 1, 2, 3];
   let randomDataQuestionIdRange = shuffle(dataQuestionIdRange);
   // Set question title
-  document.querySelector('.quiz__question h3').innerHTML = `${index + 1}. ${shuffledArray[index].Question}`;
+  document.querySelector(".quiz__question h3").innerHTML = `${index + 1}. ${shuffledArray[index].Question}`;
   // Loop through the randomDataQuestionIdRange indices.
   for (let i = 0; i <= 3; i++) {
     document.querySelector(`[data-question-id="${randomDataQuestionIdRange[i]}"] > span`).innerHTML = options[i];
 
-  };
+  }
 
   currentQuestionIndex++;
 }
@@ -141,12 +141,12 @@ function displayTotalQuestionNum(num) {
 
 // Disable the next button.
 function disableNextButton() {
-  document.querySelector('.button--next').disabled = true;
+  document.querySelector(".button--next").disabled = true;
 }
 
 // Enable the next button.
 function enableNextButton() {
-  document.querySelector('.button--next').disabled = false;
+  document.querySelector(".button--next").disabled = false;
 }
 
 // Disable the quiz answer buttons.
@@ -165,7 +165,7 @@ function enableQuizButtons() {
 
 // Check the selected answer.
 function checkAnswer(button) {
-  const spanContent = button.querySelector('.quiz__selection > span').textContent;
+  const spanContent = button.querySelector(".quiz__selection > span").textContent;
   const answer = shuffledArray[currentQuestionIndex - 1].Answer;
   let result;
   console.table(shuffledArray);
@@ -182,20 +182,20 @@ function checkAnswer(button) {
 
 // Display the tick icon on a correct answer.
 function displayTick(button) {
-  button.querySelector('i').classList.add('fa-solid', 'fa-check');
+  button.querySelector("i").classList.add("fa-solid", "fa-check");
 }
 
 // Display the cross icon on an incorrect answer.
 function displayCross(button) {
-  button.querySelector('i').classList.add('fa-solid', 'fa-times');
+  button.querySelector("i").classList.add("fa-solid", "fa-times");
 }
 
 // Remove/reset all icons.
 function removeAllIcons() {
-  const allButtons = document.querySelectorAll('.quiz__selection i')
+  const allButtons = document.querySelectorAll(".quiz__selection i")
   // Loop through all the buttons and remove the font awesome classes.
   for (let i = 0; i < allButtons.length; i++) {
-    allButtons[i].classList.remove('fa-solid', 'fa-times', 'fa-check');
+    allButtons[i].classList.remove("fa-solid", "fa-times", "fa-check");
   }
 }
 
@@ -221,12 +221,12 @@ function increaseIncorrectAnswer() {
 
 // Add u-inactive class, which disables the element.
 function disableElement(element) {
-  element.classList.add('u-inactive');
+  element.classList.add("u-inactive");
 }
 
 // Disable u-inactive class, which enables the element.
 function activateElement(element) {
-  element.classList.remove('u-inactive');
+  element.classList.remove("u-inactive");
 }
 
 function showFinalScore() {

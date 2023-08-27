@@ -59,8 +59,8 @@
   - [ x ] beautify correct/incorrect answers.
   - [ x ] Upload wireframes.
   - [ x ] Upload sitemap.
-  - [ ] Complete 'the-end' modal.
-    - [ ] Reset score function for start and replay.
+  - [ x ] Complete 'the-end' modal.
+    - [ x ] Reset score function for start and replay.
   - [ ] Contrast: Accessibility/WAVE: accessible and color contrast.
   - [ ] remove fallbackquiz.js or allquestions.js - only keep one.
   - [ ] remove all console logs on each file.
