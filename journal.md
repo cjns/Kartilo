@@ -11,7 +11,7 @@
   - Added basic css and the colour palette.
   - Added query selectors for the main buttons and windows/boxes that will be interactive.
   - Outlined the readme.md and testing.md.
-  - Added the variable roboto font locally.
+  - Added the variable Roboto font locally.
 - 14/08/16 - 16/08/23
   - These three days were spent building out the JavaScript code:
     - Making the 'next' button work on the quiz window.
@@ -57,7 +57,7 @@
   - [ x ] Add 'the-end' modal.
 - 27/08/23
   - [ x ] beautify correct/incorrect answers.
-  - [ x ] Upload wireframes.
+  - [ x ] Upload wire frames.
   - [ x ] Upload sitemap.
   - [ x ] Complete 'the-end' modal.
     - [ x ] Reset score function for start and replay.
@@ -66,24 +66,27 @@
   - [ x ] Add user input for number of questions.
   - [ x ] Add 404 page.
     - [ x ] Style 404 page
-  - [ x ] Contrast: Accessibility/WAVE: accessible and color contrast.
-  - [ ] Consider changing final 'the-end' message based on the score.  
+  - [ x ] Accessibility: WAVE.
   - [ x ] remove all console logs on each file.
   - [ x ] Remove commented out code.
   - [ x ] Remove unused code.
   - [ x ] Add email to start/end modal.
-  - [ ] Add correct answer and explanation.
-  - [ ] README - Evaluate.
+  - [ x ] README - Evaluate.
+  - [ x ] Add correct answer and explanation.
   - [ ] Testing
-    - [ ] JShint Validation
-    - [ ] HTML Validation
-    - [ ] CSS Validate
-    - [ ] Console errors
-  - [ ] Consider an alternative way to call functions rather than button event listeners.
-    - [ ] Look at the mouseover event.
-    - [ ] One time event listener.
-  - [ ] experiment with api
-  - [ ] Timer / Difficulty
+    - [ x ] JShint Validation.
+    - [ x ] HTML Validation.
+    - [ x ] CSS Validate.
+    - [ ] Lighthouse
+    - [ ] Bug: Comments not displaying in questions
+    - [ ] Console errors.
+  - [ ] Future implementations
+    - [ ] Consider an alternative way to call functions rather than button event listeners.
+      - [ ] Look at the mouseover event.
+      - [ ] One time event listener.
+    - [ ] Consider changing final 'the-end' message based on the score.  
+    - [ ] Experiment with API.
+    - [ ] Timer / Difficulty.
 
 
 

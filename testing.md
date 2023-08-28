@@ -33,6 +33,7 @@ CSS:
 ## Unit Testing
 
 ## Bugs Discovered
+Error: HTML Comments (\<!-- -->) not appearing in the quiz.
 
 ### Solved Bugs
 

@@ -25,12 +25,17 @@ const rulesMaxQuestionsInput = document.querySelector(".rules__question-input");
 const rulesInputWarning = document.querySelector(".rules__question-warning");
 // Quiz Modal
 const sectionQuiz = document.querySelector(".quiz");
+const quizSelectionButtons = document.querySelectorAll(".quiz__selection");
+const questionTitle = document.querySelector(".quiz__question h3");
+const quizReveal = document.querySelector(".quiz__reveal");
+const quizAnswer = document.querySelector(".quiz__answer");
+const quizExplanation = document.querySelector(".quiz__explanation");
+const quizExpLink = document.querySelector(".quiz__expLink");
+const quizCorrectAnswers = document.querySelector(".quiz__score-correct > span");
+const quizIncorrectAnswers = document.querySelector(".quiz__score-incorrect > span");
 const quizNextButton = document.querySelector(".button.button--next");
 const quizCurrentQuestion = document.querySelector(".quiz__current-q");
 const quizTotalQuestions = document.querySelector(".quiz__total-q");
-const quizSelectionButtons = document.querySelectorAll(".quiz__selection");
-const quizCorrectAnswers = document.querySelector(".quiz__score-correct > span");
-const quizIncorrectAnswers = document.querySelector(".quiz__score-incorrect > span");
 // The-End Modal
 const theEndSection = document.querySelector(".the-end");
 const theEndScore = document.querySelector(".the-end__score");
@@ -78,6 +83,7 @@ rulesContinueButton.addEventListener("click", () => {
   displayQuestionCounter();
   displayTotalQuestionNum(totalQuestionNum);
   disableNextButton();
+  hideElement(quizReveal);
 });
 
 // Quiz Modal
@@ -88,6 +94,7 @@ quizNextButton.addEventListener("click", () => {
     enableQuizButtons();
     disableNextButton();
     removeAllIcons();
+    hideElement(quizReveal);
   } else {
     disableElement(sectionQuiz);
     activateElement(theEndSection);
@@ -103,9 +110,11 @@ quizSelectionButtons.forEach((button) => {
     if (checkAnswer(event.currentTarget) === true) {
       displayTick(event.currentTarget);
       increaseCorrectAnswer();
+      unhideElement(quizReveal);
     } else {
       displayCross(event.currentTarget);
       increaseIncorrectAnswer();
+      unhideElement(quizReveal);
     }
   });
 });
@@ -124,6 +133,12 @@ theEndReplayButton.addEventListener("click", () => {
 // FUNCTIONS
 // Add questions into the html
 function displayQuestion(index) {
+  // Get the question, explanation, and link.
+  let question = shuffledArray[index].Question;
+  let explanation = shuffledArray[index].Explanation;
+  let link = shuffledArray[index].Link;
+  let answer = shuffledArray[index].Answer;
+
   // Create an array of the possible answers.
   let options = [
     shuffledArray[index].Answer,
@@ -131,14 +146,26 @@ function displayQuestion(index) {
     shuffledArray[index].Distractor2,
     shuffledArray[index].Distractor3
   ];
-  // Shuffle the data-question-id range.
-  let dataQuestionIdRange = [0, 1, 2, 3];
-  let randomDataQuestionIdRange = shuffle(dataQuestionIdRange);
-  // Set question title
-  document.querySelector(".quiz__question h3").innerHTML = `${index + 1}. ${shuffledArray[index].Question}`;
-  // Loop through the randomDataQuestionIdRange indices.
+  
+  // Shuffle the data-question-ids.
+  let dataQuestionIds = [0, 1, 2, 3];
+  let shuffledIds = shuffle(dataQuestionIds);
+
+  // Display question title
+  questionTitle.innerHTML = `${index + 1}. ${question}`;
+
+  // Display answer
+  quizAnswer.innerHTML = `${answer}`;
+
+  // Display explanation
+  quizExplanation.innerHTML = `${explanation}`;
+
+  // Display explanation link
+  quizExpLink.href = `${link}`;
+
+  // Loop through the random array and assign an answer.
   for (let i = 0; i <= 3; i++) {
-    document.querySelector(`[data-question-id="${randomDataQuestionIdRange[i]}"] > span`).innerHTML = options[i];
+    document.querySelector(`[data-question-id="${shuffledIds[i]}"] > span`).innerHTML = options[i];
 
   }
 
@@ -233,11 +260,13 @@ function activateElement(element) {
   element.classList.remove("u-inactive");
 }
 
+// Show the final score
 function showFinalScore() {
   theEndScore.innerHTML = correctAnswers;
   theEndTotal.innerHTML = totalQuestionNum;
 }
 
+// Clear the score for the replay
 function clearScore() {
   correctAnswers = 0;
   quizCorrectAnswers.innerHTML = correctAnswers;
@@ -249,4 +278,12 @@ function clearScore() {
 
 function addMaxQuestions() {
   rulesMaxQuestionsInput.max = lengthOfAllQuestions;
+}
+
+function unhideElement(element) {
+  element.classList.remove("u-hidden");
+}
+
+function hideElement(element) {
+  element.classList.add("u-hidden");
 }
