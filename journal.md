@@ -1,4 +1,4 @@
-# Journal
+# Journal / To Do
 
 - 09/08/23
   - Showed a prototype to Graeme Taylor (mentor) showing the style of multiple choice quiz I am aiming to develop and agreed to start fleshing out the application. I am looking to use a list of questions currently available via [freeCodeCamp within their developer quiz repository](https://github.com/freeCodeCamp/Developer_Quiz_Site), which they use for their own [developer quiz](https://developerquiz.org/).
@@ -73,13 +73,13 @@
   - [ x ] Add email to start/end modal.
   - [ x ] README - Evaluate.
   - [ x ] Add correct answer and explanation.
-  - [ ] Testing
+  - [ x ] Testing
     - [ x ] JShint Validation.
     - [ x ] HTML Validation.
     - [ x ] CSS Validate.
-    - [ ] Lighthouse
+    - [ x ] Lighthouse
+    - [ x ] Check for console errors.
     - [ ] Bug: Comments not displaying in questions
-    - [ ] Console errors.
   - [ ] Future implementations
     - [ ] Consider an alternative way to call functions rather than button event listeners.
       - [ ] Look at the mouseover event.
