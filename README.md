@@ -18,7 +18,7 @@ An interactive quiz using html, css, and JavaScript.
 
 >'What value does it provide?'
 
-It has been suggested that making notes and [other passive methods](https://www.bbc.co.uk/news/health-22565912) of studying do not help you learn. It is more effective to engage in [active learning](https://www.cambridge.org/us/education/blog/2019/06/25/what-active-learning-and-what-are-benefits/), which engages the brain. Therefore, Kartilo is convenient way to test yourself on JavaScript rather than make hand made flash cards or questions.
+It has been suggested that making notes and [other passive methods](https://www.bbc.co.uk/news/health-22565912) of studying do not help you learn. It is more effective to engage in [active learning](https://www.cambridge.org/us/education/blog/2019/06/25/what-active-learning-and-what-are-benefits/), which engages the brain. Therefore, Kartilo is a convenient way to test yourself on JavaScript rather than make hand made flash cards or questions.
 
 ### Target Audience
 Students or anyone interested in learning/being quizzed on JavaScript.
@@ -72,12 +72,12 @@ I have assigned a score out of five (5) to the importance and viability / feasib
 We are looking to make a single page web application that will utilise html elements as modals/windows that will direct the user through the flow of the game.
 
 It will consist of four parts:
-1. Start.
-2. Rules.
-3. The Quiz.
-4. The End/Final Score.
+1. A start modal.
+2. A rules modal.
+3. A quiz modal.
+4. An end/final score modal.
 
-### Start
+### Start Modal
 #### Opportunity/Problem addressed:
 6. As a user with dyslexia I want font and colour options that are easy to read.
 8. As a visually impaired user I want the app to be compatible with screen readers.
@@ -85,25 +85,26 @@ It will consist of four parts:
 
 The start modal will act as a landing page. It will be the starting point for the application and set the scene and design for the quiz, which will initialise once the 'start' button has been pressed.
 
-### Rules
+### Rules Modal
 #### Opportunity/Problem addressed:
 12. I want to be able to choose the number of questions I answer.
 
 The rules modal will contain the small number of rules for the game and include any relevant input fields. At present this will include the number of questions the user would like to attempt to answer. It will contain an 'exit' button, and a 'continue' button that will only be enabled once the input fields have a valid value.
 
-### The Quiz
-#### Opportunity/Problem addressed: 
+### The Quiz Modal
+#### Opportunity/Problem addressed:
+2. I want a set list of questions I do not have to create myself.
 5. I want to see the correct answer after I have answered a question.
 9. I want explanations for the answers.
 
 This is the main part of the web application and will display all the relevant information needed for the quiz:
 - The score counter.
-- The question.
+- The question (taken randomly from a larger set of questions).
 - The possible answers.
 - The question counter.
 - The 'next' button to proceed to the next question once an answer has been selected.
 
-### The End/Final Score
+### The End/Final Score Modal
 #### Opportunity/Problem addressed: 
 4. I want to be able to see my final score.
 
@@ -246,8 +247,9 @@ VSCode and Github Desktop were used for local development and pushing code to Gi
 [Coding Nepal](https://www.youtube.com/watch?v=WUBhpSRS_fk) for influencing the feel of the quiz app.
 
 ## Code
-[Fisher-Yates (Knuff) shuffle](https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array): Used in ui.js.
+[Fisher-Yates (Knuff) shuffle](https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array): Used in ui.js to randomly shuffle the set of questions each time the quiz is started.
 
 ## Acknowledgements
 - Code Institute Mentor, Graeme Taylor.
 - Newcastle College University Centre Course Facilitator, Callum Jones.
+- Code Institute for their learning resources.
