@@ -1,8 +1,10 @@
-/* ============================================================ VARIABLES: COLOURS */
+/* ============================================================ VARIABLES */
 :root {
-  /* Sections */
-  --box-background: hsl(100, 100%, 100%);
+  /* GENERAL */
   --body-background: hsl(144, 35%, 75%);
+  /* Sections / Modals */
+  --modal-box-background: hsl(100, 100%, 100%);
+  --modal-box-shadow: 0px 3px 9px 0 hsla(0, 0%, 0%, 0.2), 0px 5px 15px 0 hsla(0, 0%, 0%, 0.12);
   /* Buttons */
   --button-focus-box-shadow: hsla(120, 61%, 50%, 0.4);
   --button-background: hsl(0, 0%, 49%);
@@ -14,6 +16,7 @@
   /* RULES SECTION */
   /* Input */
   --input-warning: hsl(0, 100%, 50%);
+  --input-border: hsl(144, 35%, 65%);
   /* Exit button */
   --button-exit-color: hsl(144, 62%, 25%);
   --button-exit-border: hsl(144, 62%, 25%);
@@ -27,8 +30,6 @@
   --button-continue-hover-text-shadow: hsla(0, 0%, 0%, 0.2);
   --button-continue-hover-border-color: hsl(144, 55%, 65%);
   --button-continue-active-box-shadow: hsla(0, 0%, 0%, 0.1);
-  /* Question input */
-  --input-border: hsl(144, 35%, 65%);
   /* QUIZ SECTION */
   /* Next button */
   --button-next-color: hsl(100, 100%, 100%);
@@ -39,10 +40,10 @@
   --quiz-selection-background: hsl(138, 36%, 89%);
   --quiz-selection-border: hsl(144, 35%, 75%);
   --quiz-selection-hover-background: hsl(144, 35%, 75%);
-  /* Quiz timer colours */
-  --quiz-timer-background: hsl(137, 39%, 83%);
-  --quiz-timer-count-background: hsl(0, 0%, 20%);
-  --quiz-timer-count-color: hsl(100, 100%, 100%);
+  /* Score counter */
+  --score-background: hsl(137, 39%, 83%);
+  --score-count-background: hsl(0, 0%, 20%);
+  --score-count-color: hsl(100, 100%, 100%);
   /* FONT AWESOME ICONS */
   --tick-color: hsl(144, 62%, 25%);
   --tick-background: hsl(138, 36%, 89%);
@@ -133,9 +134,9 @@ main {
   align-items: center;
   max-width: 90%;
   width: 90%;
-  background-color: var(--box-background, hsl(100, 100%, 100%));
+  background-color: var(--modal-box-background);
   border-radius: 5px;
-  box-shadow: 0px 3px 9px 0 hsla(0, 0%, 0%, 0.2), 0px 5px 15px 0 hsla(0, 0%, 0%, 0.12);
+  box-shadow: var(--modal-box-shadow);
 }
 
 /* Start Modal */
@@ -228,9 +229,8 @@ main {
 }
 
 .quiz__score-correct,
-.quiz__score-incorrect,
-.quiz__timer-text {
-  background-color: var(--quiz-timer-background);
+.quiz__score-incorrect {
+  background-color: var(--score-background);
   border-radius: 5px;
   padding: 0.5rem;
 }
@@ -238,8 +238,8 @@ main {
 .quiz__score-correct>span,
 .quiz__score-incorrect>span,
 .quiz__timer-count {
-  background-color: var(--quiz-timer-count-background);
-  color: var(--quiz-timer-count-color);
+  background-color: var(--score-count-background);
+  color: var(--score-count-color);
   border-radius: 5px;
   padding: 0.3rem;
 }
@@ -292,7 +292,7 @@ main {
   color: var(--tick-color);
   background: var(--tick-background);
   border: 1px solid var(--tick-border);
-  border-radius: 10px;
+  border-radius: 5px;
   text-align: center;
   padding: 0.25rem;
   width: 2rem;
@@ -306,7 +306,7 @@ main {
   color: var(--cross-color);
   background: var(--cross-background);
   border: 1px solid var(--cross-border);
-  border-radius: 10px;
+  border-radius: 5px;
   text-align: center;
   padding: 0.25rem;
   width: 2rem;
@@ -369,10 +369,11 @@ main {
   .quiz__heading {
     font-size: 1.75rem;
   }
-  .quiz__question > h3 {
+
+  .quiz__question>h3 {
     font-size: 1.25rem;
   }
-  
+
   .quiz__questions-container {
     gap: 0.5rem;
   }
@@ -470,18 +471,19 @@ main {
 
 }
 
-/* The-End Modal:  */
-
 /* ============================================================ UTILITY CLASSES */
-.u-active {
-  display: flex;
-}
-
 .u-inactive {
   display: none;
 }
 
 /* ============================================================ 404 PAGE */
-.er-404__heading {
-  margin-bottom: 1rem;
+.er-404 {
+  display: flex;
+  flex-flow: column wrap;
+  padding: 2rem;
+  background-color: var(--modal-box-background);
+  border-radius: 5px;
+  gap: 1rem;
+  box-shadow: var(--modal-box-shadow);
+  margin: 0rem 1rem;
 }

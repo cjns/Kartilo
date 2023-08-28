@@ -63,13 +63,14 @@
     - [ x ] Reset score function for start and replay.
   - [ x ] Keep allquestions.js.
 - 28/08/23
-- [ x ] Add user input for number of questions.
-- [ x ] Add 404 page.
+  - [ x ] Add user input for number of questions.
+  - [ x ] Add 404 page.
+    - [ x ] Style 404 page
+  - [ x ] Contrast: Accessibility/WAVE: accessible and color contrast.
   - [  ] Consider an alternative way to call functions rather than button event listeners.
     - [ ] Look at the mouseover event.
     - [ ] One time event listener.
   - [ ] Consider changing final 'the-end' message based on the score.  
-  - [ ] Contrast: Accessibility/WAVE: accessible and color contrast.
   - [ ] remove all console logs on each file.
   - [ ] Remove commented out code.
   - [ ] Remove unused code.
