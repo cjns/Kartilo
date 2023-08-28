@@ -15,10 +15,18 @@ The following tools were used to validate the project:
 |x|x|
 
 ## HTML, Accessibility, & Performance
-|Page|HTML|WAVE|Lighthouse Mobile|Lighthouse Desktop|
-|-|-|-|-|-|
-|index.html|[Valid](assets/images/html-index-valid.webp)|x|x|x|
-|404.html|[Valid](assets/images/html-404-valid.webp)|x|x|x|
+|Page|HTML|Lighthouse Mobile|Lighthouse Desktop|
+|-|-|-|-|
+|index.html|[Valid](assets/images/html-index-valid.webp)|x|x|
+|404.html|[Valid](assets/images/html-404-valid.webp)|x|x|
+
+## Accessibility
+|Modal|WAVE Validation|
+|-|-|
+|Start|[Valid](assets/images/wave-start.webp)|
+|Rules|[Valid](assets/images/wave-start.webp)|
+|Quiz|[Valid](assets/images/wave-quiz.webp)|
+|Final|[Valid](assets/images/wave-final.webp)|
 
 ## CSS
 |File|Validation|

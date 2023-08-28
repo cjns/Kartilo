@@ -32,10 +32,10 @@
   --button-continue-active-box-shadow: hsla(0, 0%, 0%, 0.1);
   /* QUIZ SECTION */
   /* Next button */
-  --button-next-color: hsl(100, 100%, 100%);
-  --button-next-background: hsl(144, 35%, 75%);
-  --button-next-hover-color: hsl(100, 100%, 90%);
-  --button-next-hover-background: hsl(144, 45%, 70%);
+  --button-next-color: hsl(144, 35%, 30%);
+  --button-next-background: hsl(144, 35%, 65%);
+  --button-next-hover-color: hsl(100, 100%, 95%);
+  --button-next-hover-background: hsl(144, 55%, 70%);
   /* Quiz answer buttons */
   --quiz-selection-background: hsl(138, 36%, 89%);
   --quiz-selection-border: hsl(144, 35%, 75%);
