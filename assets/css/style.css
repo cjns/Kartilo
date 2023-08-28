@@ -66,7 +66,7 @@
 @font-face {
   font-family: "Roboto Flex";
   src:
-    url("/assets/fonts/roboto-flex.woff2") format("woff2"),
+    url("assets/fonts/roboto-flex.woff2") format("woff2"),
     local("sans-serif");
   font-style: normal;
   font-weight: 100 1000;

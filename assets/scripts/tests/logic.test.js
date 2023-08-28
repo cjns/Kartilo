@@ -19,7 +19,7 @@
 // different types
 // no parameters, more parameters
 
-import { JAVASCRIPT_QUIZ } from '../fallbackQuiz.js';
+import { allJavaScriptQuestions } from '../allQuestions.js';
 import { shuffle, retrieveQuestions } from '../logic.js';
 
 describe('shuffle function', () => {

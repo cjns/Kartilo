@@ -1,5 +1,5 @@
 // import { javaScriptQuiz } from '../scripts/fallbackQuiz.js';
-import { allJavaScriptQuestions } from '/assets/scripts/allQuestions.js';
+import { allJavaScriptQuestions } from './allQuestions.js';
 const lengthOfAllQuestions = allJavaScriptQuestions.length;
 
 // Fisher-Yates Shuffle adapted from https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array
