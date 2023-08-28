@@ -51,7 +51,7 @@ startButton.addEventListener("click", () => {
 rulesMaxQuestionsInput.addEventListener("input", function() {
   const inputValue = parseInt(rulesMaxQuestionsInput.value, 10);
 
-  if (!rulesMaxQuestionsInput.value || isNaN(rulesMaxQuestionsInput.value) || rulesMaxQuestionsInput.value > 185 || rulesMaxQuestionsInput.value < 1) {
+  if (!inputValue || isNaN(inputValue) || inputValue > 185 || inputValue < 1) {
     rulesInputWarning.classList.remove('u-inactive');
     rulesContinueButton.disabled = true;
   } else {
@@ -263,7 +263,7 @@ function clearScore() {
 
 function addMaxQuestions() {
   rulesMaxQuestionsInput.max = lengthOfAllQuestions;
-};
+}
 
 export {
   displayQuestion,
