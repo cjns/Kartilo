@@ -21,12 +21,12 @@ function shuffle(array) {
   return array;
 }
 
-// Get X questions from the shuffled array. Default is 3. End is not included in slice.
+// Get questions from the shuffled array. Default is 3. End is not included in slice.
 function retrieveQuestions(numberOfQuestions = 3) {
   // Shuffle the questions.
   let shuffled = shuffle(allJavaScriptQuestions);
 
-  // Return X number of questions
+  // Return number of questions
   shuffled = shuffled.slice(0, numberOfQuestions);
 
   return shuffled;

@@ -276,14 +276,17 @@ function clearScore() {
   currentQuestionNumber = 0;
 }
 
+// Add 'max' value to the html input field
 function addMaxQuestions() {
   rulesMaxQuestionsInput.max = lengthOfAllQuestions;
 }
 
+// Unhide an element
 function unhideElement(element) {
   element.classList.remove("u-hidden");
 }
 
+// Hide an element
 function hideElement(element) {
   element.classList.add("u-hidden");
 }
