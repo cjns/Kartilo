@@ -1,24 +1,6 @@
 /**
  * @jest-environment node
  */
-
-// Red: Write a failing test.
-// Green: Get the test to pass.
-// Refactor: Optimise.
-
-// Readable: Clear description and failure messages.
-// Isolate: Atomic, isolated testing.
-// Thorough: Edge cases.
-// Explicit: Obvious what the test does.
-
-// Consider testing:
-// length
-// values
-// order
-// edge cases/ outliers
-// different types
-// no parameters, more parameters
-
 import { allJavaScriptQuestions } from '../allQuestions.js';
 import { shuffle, retrieveQuestions } from '../logic.js';
 
@@ -45,7 +27,6 @@ describe('shuffle function', () => {
   });
 
 });
-
 
 describe('retrieveQuestions function', () => {
   it('should return the specified number of questions', () => {
