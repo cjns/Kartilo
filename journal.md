@@ -67,19 +67,21 @@
   - [ x ] Add 404 page.
     - [ x ] Style 404 page
   - [ x ] Contrast: Accessibility/WAVE: accessible and color contrast.
-  - [  ] Consider an alternative way to call functions rather than button event listeners.
-    - [ ] Look at the mouseover event.
-    - [ ] One time event listener.
   - [ ] Consider changing final 'the-end' message based on the score.  
-  - [ ] remove all console logs on each file.
-  - [ ] Remove commented out code.
-  - [ ] Remove unused code.
+  - [ x ] remove all console logs on each file.
+  - [ x ] Remove commented out code.
+  - [ x ] Remove unused code.
+  - [ ] Add email to start & end modal.
+  - [ ] Add correct answer and explanation.
   - [ ] README - Evaluate.
   - [ ] Testing
     - [ ] JShint Validation
     - [ ] HTML Validation
     - [ ] CSS Validate
     - [ ] Console errors
+  - [ ] Consider an alternative way to call functions rather than button event listeners.
+    - [ ] Look at the mouseover event.
+    - [ ] One time event listener.
   - [ ] experiment with api
   - [ ] Timer / Difficulty
 
