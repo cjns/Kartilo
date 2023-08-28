@@ -10,7 +10,7 @@
   --button-box-shadow: hsla(120, 61%, 50%, 0.4);
   /* START SECTION */
   /* Start button */
-  --button-start-font-color: hsl(144, 35%, 50%);
+  --button-start-font-color: hsl(144deg 42.42% 42.33%);
   /* RULES SECTION */
   /* Input */
   --input-warning: hsl(0, 100%, 50%);
