@@ -61,9 +61,14 @@
   - [ x ] Upload sitemap.
   - [ x ] Complete 'the-end' modal.
     - [ x ] Reset score function for start and replay.
+  - [ x ] Keep allquestions.js.
+- 28/08/23
+- [ x ] Add user input for number of questions.
+  - [  ] Consider an alternative way to call functions rather than button event listeners.
+    - [ ] Look at the mouseover event.
+    - [ ] One time event listener.
   - [ ] Consider changing final 'the-end' message based on the score.  
   - [ ] Contrast: Accessibility/WAVE: accessible and color contrast.
-  - [ x ] Keep allquestions.js.
   - [ ] remove all console logs on each file.
   - [ ] Remove commented out code.
   - [ ] Remove unused code.
@@ -75,7 +80,6 @@
     - [ ] Console errors
   - [ ] experiment with api
   - [ ] Timer / Difficulty
-- 28/08/23
 
 
 

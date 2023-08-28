@@ -8,8 +8,10 @@
   --button-background: hsl(0, 0%, 49%);
   --button-border-color: hsl(144, 35%, 65%);
   --button-box-shadow: hsla(120, 61%, 50%, 0.4);
+  /* START SECTION */
   /* Start button */
   --button-start-font-color: hsl(144, 35%, 50%);
+  /* RULES SECTION */
   /* Exit button */
   --button-exit-color: hsl(144, 62%, 25%);
   --button-exit-border: hsl(144, 62%, 25%);
@@ -23,6 +25,9 @@
   --button-continue-hover-text-shadow: hsla(0, 0%, 0%, 0.2);
   --button-continue-hover-border-color: hsl(144, 55%, 65%);
   --button-continue-active-box-shadow: hsla(0, 0%, 0%, 0.1);
+  /* Question input */
+  --input-border: hsl(144, 35%, 65%);
+  /* QUIZ SECTION */
   /* Next button */
   --button-next-color: hsl(100, 100%, 100%);
   --button-next-background: hsl(144, 35%, 75%);
@@ -36,7 +41,7 @@
   --quiz-timer-background: hsl(137, 39%, 83%);
   --quiz-timer-count-background: hsl(0, 0%, 20%);
   --quiz-timer-count-color: hsl(100, 100%, 100%);
-  /* Font Awesome Icons */
+  /* FONT AWESOME ICONS */
   --tick-color: hsl(144, 62%, 25%);
   --tick-background: hsl(138, 36%, 89%);
   --tick-border: hsl(144, 62%, 25%);
@@ -163,6 +168,23 @@ main {
   padding: 0.5rem 0;
 }
 
+.rules__question-choice {
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.rules__question-input {
+  border: 1px solid var(--input-border);
+  height: 4rem;
+  width: 4rem;
+  text-align: center;
+}
+
 .rules__footer {
   width: 100%;
   padding: 1rem 1rem;
@@ -172,6 +194,13 @@ main {
   justify-content: space-between;
   align-items: center;
   gap: 1rem;
+}
+
+@media (max-width: 410px) {
+  .rules__question-choice {
+    flex-direction: column;
+    justify-content: center;
+  }
 }
 
 /* Quiz Modal */

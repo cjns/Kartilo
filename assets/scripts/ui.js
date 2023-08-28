@@ -1,7 +1,8 @@
 import {
   shuffle,
   retrieveQuestions,
-  retrieveTotalQuestionNum
+  retrieveTotalQuestionNum,
+  lengthOfAllQuestions
 } from "./logic.js";
 
 // VARIABLES
@@ -20,6 +21,7 @@ const startButton = document.querySelector(".button.button--start");
 const sectionRules = document.querySelector(".rules");
 const rulesExitButton = document.querySelector(".button.button--exit");
 const rulesContinueButton = document.querySelector(".button.button--continue");
+const rulesMaxQuestions = document.querySelector(".rules__question-input");
 // Quiz Modal
 const sectionQuiz = document.querySelector(".quiz");
 const quizNextButton = document.querySelector(".button.button--next");
@@ -40,6 +42,7 @@ const theEndReplayButton = document.querySelector(".button-replay");
 startButton.addEventListener("click", () => {
   disableElement(sectionStart);
   activateElement(sectionRules);
+  addMaxQuestions();
 });
 
 // Rules Modal
@@ -54,7 +57,7 @@ rulesContinueButton.addEventListener("click", () => {
   enableQuizButtons();
   disableElement(sectionRules);
   activateElement(sectionQuiz);
-  shuffledArray = retrieveQuestions();
+  shuffledArray = retrieveQuestions(rulesMaxQuestions.value);
   totalQuestionNum = retrieveTotalQuestionNum(shuffledArray);
   displayQuestion(currentQuestionIndex);
   displayQuestionCounter();
@@ -242,6 +245,10 @@ function clearScore() {
   currentQuestionIndex = 0;
   currentQuestionNumber = 0;
 }
+
+function addMaxQuestions() {
+  rulesMaxQuestions.max = lengthOfAllQuestions;
+};
 
 export {
   displayQuestion,
