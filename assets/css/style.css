@@ -141,13 +141,21 @@ main {
 
 /* Start Modal */
 .start {
-  width: 600px;
+  max-width: 600px;
   padding: 3rem;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
 }
 
 .start__header {
   text-align: center;
-  padding-bottom: 2rem;
+}
+
+.start__contact {
+  font-size: small;
 }
 
 /* Rules Modal */

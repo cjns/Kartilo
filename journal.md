@@ -71,7 +71,7 @@
   - [ x ] remove all console logs on each file.
   - [ x ] Remove commented out code.
   - [ x ] Remove unused code.
-  - [ ] Add email to start & end modal.
+  - [ x ] Add email to start/end modal.
   - [ ] Add correct answer and explanation.
   - [ ] README - Evaluate.
   - [ ] Testing

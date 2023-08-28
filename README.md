@@ -43,7 +43,7 @@ Students or anyone interested in learning/being quizzed on JavaScript.
 15. I want to see a leader board.
 
 ### Strategic Trade-offs
-I have assigned a score out of five (5) to the importance and viabilty / feasibility for each of the user goals to establish the immediate focus. Anything fallout outside of the immediate focus will be considered for a future implementation.
+I have assigned a score out of five (5) to the importance and viability / feasibility for each of the user goals to establish the immediate focus. Anything fallout outside of the immediate focus will be considered for a future implementation.
 
 ---
 |Opportunity / Problem|Importance|Viability / Feasibility|Result|Possible Solution|
@@ -104,7 +104,6 @@ This is the main part of the web application and will display all the relevant i
 ### The End/Final Score
 #### Opportunity/Problem addressed: 
 4. I want to be able to see my final score.
-11. I want to be able to tell you about any bugs I encounter.
 
 This the final modal that will thank the user for playing the game and display their final score. It will present the option to quit, which will take them back to the start section, or replay the game, which will take them to the rules section.
 
@@ -177,7 +176,7 @@ The disadvantage of this may be that it won't look as unique to some people. How
 I will use the .woff2 font format since it has been specifically designed for the web, offers better compression, and performance.
 
 ### Icons
-I will use the free icons supplied by [fontawesome](https://fontawesome.com/) and change their appearnace with css.
+I will use the free icons supplied by [fontawesome](https://fontawesome.com/) and change their appearance with css.
 
 ### Styling
 The overall styling is attempting to convey a 'clean' feel with cool greens, soft box shadows, and rounded edges.
@@ -195,18 +194,24 @@ Incorrect answers will use a red palette because it is associated with warnings,
   - [Babel](https://babeljs.io/docs/)
 
 ## Other Resources
-- [VSCode](https://code.visualstudio.com/): Coding text editor.
+- [Am I Responsive](https://ui.dev/amiresponsive/): Images of responsive design.
+- [Balsamiq](https://balsamiq.com/): Wire framing.
+- [Chrome Developer Tools](https://developer.chrome.com/docs/devtools/): Testing and debugging.
+- [ESLint](https://eslint.org/)
+- [favicon.io](https://favicon.io/): For generating the favicon.
+- [Font Awesome](https://fontawesome.com/): Icons.
 - [Git](https://git-scm.com/): For version control and pushing to Github.
 - [GitHub](https://github.com/): To store projects in a public repository.
 - [GitHub Desktop](https://desktop.github.com/): Desktop software to simplify the Git/Github development workflow.
 - [Google Fonts](https://fonts.google.com/): Fonts.
 - [Google Variable Fonts](https://fonts.google.com/variablefonts): Variable Fonts.
 - [Google Fonts Knowledge](https://fonts.google.com/knowledge/): Typography Knowledge. 
-- [WebP Converter](https://developers.google.com/speed/webp): Converting images to the WebP format.
-- [JEST](https://jestjs.io/): JavaScript testing.
-- [jshint](https://jshint.com): JavaScript testing.
-- [Font Awesome](https://fontawesome.com/): Icons.
+- [Jest](https://jestjs.io/): JavaScript testing.
+- [JSHint](https://jshint.com): JavaScript testing.
 - [mycolor.space](https://mycolor.space/?hex=%23A9D6BB&sub=1): For colours.
+- [Web accessibility evaluation tool (WAVE)](https://wave.webaim.org/): For testing site accessibility quality.
+- [WebP Converter](https://developers.google.com/speed/webp): Converting images to the WebP format.
+- [VSCode](https://code.visualstudio.com/): Coding text editor.
 
 ## Testing
 Please visit the [testing](./testing.md) file.
