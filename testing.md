@@ -16,8 +16,8 @@ The following tools were used to validate and test the application:
 |2. I want a set list of questions I do not have to create myself|[A list of 185 JS questions have been provided](assets/scripts/allQuestions.js)|
 |4. I want to be able to see my final score|[The final score is displayed at the end of the quiz](assets/images/final-score.webp)|
 |5. I want to see the correct answer after I have answered a question|[The correct answer is shown upon selecting an answer](assets/images/explanation.webp)|
-|6. As a user with dyslexia I want font and colour options that are easy to read|Color contrast used appropriately - see the accessibility results|
-|8. As a visually impaired user I want the app to be compatible with screen readers|Label and semantics used appropriately - see the accessibility results|
+|6. As a user with dyslexia I want font and colour options that are easy to read|Color contrast used appropriately - see the accessibility and lighthouse results|
+|8. As a visually impaired user I want the app to be compatible with screen readers|Label and semantics used appropriately - see the accessibility and lighthouse results|
 |9. I want explanations for the answers|[An explanation is offered after an answer is chosen](assets/images/explanation.webp)|
 |11. I want to be able to tell you about any bugs I encounter|[Email address is included on the first modal](assets/images/start-mail-to.webp)|
 |12. I want to be able to choose the number of questions I answer|[You can select how many questions you would like to answer](assets/images/number-of-questions.webp)|

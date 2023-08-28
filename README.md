@@ -251,5 +251,5 @@ VSCode and Github Desktop were used for local development and pushing code to Gi
 
 ## Acknowledgements
 - Code Institute Mentor, Graeme Taylor.
-- Newcastle College University Centre Course Facilitator, Callum Jones.
-- Code Institute for their learning resources.
+- [Newcastle College University Centre](https://www.ncl-coll.ac.uk/) and Course Facilitator, Callum Jones.
+- [Code Institute](https://codeinstitute.net/) for their learning resources.
