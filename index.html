@@ -19,7 +19,7 @@
     <!-- The starting section -->
     <section class="start">
       <h1 class="start__header">Welcome to Kartilo</h1>
-      <button class="button button--start">Start</button>
+      <button aria-label="Click to show the rules" class="button button--start">Start</button>
     </section>
 
     <!-- The rules section -->
@@ -33,13 +33,13 @@
         <p class="rules__item">3. You cannot exit the quiz once you start.</p>
       </div>
       <div class="rules__question-choice">
-        <label class="rules__question-label">How many of the 185 questions would you like to test yourself against?</label>
+        <label class="rules__question-label" for="questionInput">How many of the 185 questions would you like to test yourself against?</label>
         <input class="rules__question-input" type="number" id="questionInput" min="1" max="185" value="3">
         <p class="rules__question-warning u-inactive">Please enter a number from 1 - 185.</p>
       </div>
       <footer class="rules__footer">
-        <button class="button button--exit">Exit</button>
-        <button class="button button--continue">Continue</button>
+        <button aria-label="Click to show the home page" class="button button--exit">Exit</button>
+        <button aria-label="Click to begin the quiz" class="button button--continue">Continue</button>
       </footer>
     </section>
 
@@ -55,16 +55,16 @@
         <div class="quiz__question">
           <h3>Question</h3>
         </div>
-        <button class="quiz__selection" data-question-id="0">
+        <button aria-label="Click for answer 1" class="quiz__selection" data-question-id="0">
           <span>Option</span><i class=""></i>
         </button>
-        <button class="quiz__selection" data-question-id="1">
+        <button aria-label="Click for answer 2"  class="quiz__selection" data-question-id="1">
           <span>Option</span><i class=""></i>
         </button>
-        <button class="quiz__selection" data-question-id="2">
+        <button aria-label="Click for answer 3"  class="quiz__selection" data-question-id="2">
           <span>Option</span><i class=""></i>
         </button>
-        <button class="quiz__selection" data-question-id="3">
+        <button aria-label="Click for answer 4"  class="quiz__selection" data-question-id="3">
           <span>Option</span><i class=""></i>
         </button>
       </div>
@@ -72,7 +72,7 @@
         <div class="quiz__progress">
           <p><span class="quiz__current-q">x</span> of <span class="quiz__total-q">y</span> Questions</p>
         </div>
-        <button class="button button--next">Next Question</button>
+        <button aria-label="Click to show the next question" class="button button--next">Next Question</button>
       </footer>
     </section>
 
@@ -89,8 +89,8 @@
         </p>
       </div>
       <footer class="the-end__footer">
-        <button class="button button-quit">Quit</button>
-        <button class="button button-replay">Play Again!</button>
+        <button aria-label="Click to quit and show the home page" class="button button-quit">Quit</button>
+        <button aria-label="Click to show the rules and replay" class="button button-replay">Play Again!</button>
       </footer>
     </section>
 
