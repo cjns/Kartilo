@@ -64,6 +64,7 @@
   - [ x ] Keep allquestions.js.
 - 28/08/23
 - [ x ] Add user input for number of questions.
+- [ x ] Add 404 page.
   - [  ] Consider an alternative way to call functions rather than button event listeners.
     - [ ] Look at the mouseover event.
     - [ ] One time event listener.

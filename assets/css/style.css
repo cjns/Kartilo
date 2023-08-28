@@ -12,6 +12,8 @@
   /* Start button */
   --button-start-font-color: hsl(144, 35%, 50%);
   /* RULES SECTION */
+  /* Input */
+  --input-warning: hsl(0, 100%, 50%);
   /* Exit button */
   --button-exit-color: hsl(144, 62%, 25%);
   --button-exit-border: hsl(144, 62%, 25%);
@@ -183,6 +185,10 @@ main {
   height: 4rem;
   width: 4rem;
   text-align: center;
+}
+
+.rules__question-warning {
+  color: var(--input-warning);
 }
 
 .rules__footer {
@@ -453,4 +459,9 @@ main {
 
 .u-inactive {
   display: none;
+}
+
+/* ============================================================ 404 PAGE */
+.er-404__heading {
+  margin-bottom: 1rem;
 }

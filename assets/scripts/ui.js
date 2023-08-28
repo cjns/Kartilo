@@ -21,7 +21,8 @@ const startButton = document.querySelector(".button.button--start");
 const sectionRules = document.querySelector(".rules");
 const rulesExitButton = document.querySelector(".button.button--exit");
 const rulesContinueButton = document.querySelector(".button.button--continue");
-const rulesMaxQuestions = document.querySelector(".rules__question-input");
+const rulesMaxQuestionsInput = document.querySelector(".rules__question-input");
+const rulesInputWarning = document.querySelector(".rules__question-warning");
 // Quiz Modal
 const sectionQuiz = document.querySelector(".quiz");
 const quizNextButton = document.querySelector(".button.button--next");
@@ -46,6 +47,20 @@ startButton.addEventListener("click", () => {
 });
 
 // Rules Modal
+// Input Validation
+rulesMaxQuestionsInput.addEventListener("input", function() {
+  const inputValue = parseInt(rulesMaxQuestionsInput.value, 10);
+
+  if (!rulesMaxQuestionsInput.value || isNaN(rulesMaxQuestionsInput.value) || rulesMaxQuestionsInput.value > 185 || rulesMaxQuestionsInput.value < 1) {
+    rulesInputWarning.classList.remove('u-inactive');
+    rulesContinueButton.disabled = true;
+  } else {
+    rulesInputWarning.classList.add('u-inactive');
+    rulesContinueButton.disabled = false;
+  }
+});
+
+
 rulesExitButton.addEventListener("click", () => {
   disableElement(sectionRules);
   activateElement(sectionStart);
@@ -57,7 +72,7 @@ rulesContinueButton.addEventListener("click", () => {
   enableQuizButtons();
   disableElement(sectionRules);
   activateElement(sectionQuiz);
-  shuffledArray = retrieveQuestions(rulesMaxQuestions.value);
+  shuffledArray = retrieveQuestions(rulesMaxQuestionsInput.value);
   totalQuestionNum = retrieveTotalQuestionNum(shuffledArray);
   displayQuestion(currentQuestionIndex);
   displayQuestionCounter();
@@ -247,7 +262,7 @@ function clearScore() {
 }
 
 function addMaxQuestions() {
-  rulesMaxQuestions.max = lengthOfAllQuestions;
+  rulesMaxQuestionsInput.max = lengthOfAllQuestions;
 };
 
 export {
