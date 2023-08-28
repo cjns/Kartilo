@@ -1,3 +1,5 @@
+![Am I Responsive](assets/images/am-i-responsive.webp)
+
 # Introduction
 Kartilo is an interactive web application for learning JavaScript using quiz/flash cards. The name comes from the [Esperanto](https://en.wikipedia.org/wiki/Esperanto) word 'karto', which means 'card', and the suffix '-ilo', which indicates a tool or instrument.
 

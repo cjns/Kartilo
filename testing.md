@@ -14,16 +14,22 @@ The following tools were used to validate the project:
 |-|-|
 |x|x|
 
-## HTML & CSS Validation, Accessibility, & Performance
+## HTML, Accessibility, & Performance
 |Page|HTML|WAVE|Lighthouse Mobile|Lighthouse Desktop|
 |-|-|-|-|-|
-|x|x|x|x|x|
-CSS:
+|index.html|[Valid](assets/images/html-index-valid.webp)|x|x|x|
+|404.html|[Valid](assets/images/html-404-valid.webp)|x|x|x|
+
+## CSS
+|File|Validation|
+|-|-|
+|style.css|[Valid](assets/images/css-style-valid.webp)|
 
 ## JavaScript Testing
-|File|JSHint|
+|File|ESLint|
 |-|-|
-|x|x|
+|logic.js|[Valid](assets/images/js-logic-valid.webp)|
+|ui.js|[Valid](assets/images/js-ui-valid.webp)|
 
 ## Manual Testing
 |Feature|Expected Outcome|Testing Performed|Result|Pass / Fail|
