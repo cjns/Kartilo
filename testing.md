@@ -8,6 +8,10 @@ The following tools were used to validate the project:
 - CSS: [W3C CSS Validator](https://jigsaw.w3.org/css-validator/)
 - Accessibility: [WAVE (Web Accessibility Evaluation Tool)](https://wave.webaim.org/)
 - Performance: [Lighthouse (Within Chrome Developer Tools)](https://developer.chrome.com/docs/lighthouse/overview/)
+- JS Logic: [Jest](https://jestjs.io/)
+
+## Introduction
+
 
 ## Testing Client Stories
 |Opportunity / Problem|Evidence of meeting user story|
@@ -23,10 +27,11 @@ The following tools were used to validate the project:
 ## Accessibility
 |Modal|WAVE Validation|
 |-|-|
-|Start|[Valid](assets/images/wave-start.webp)|
-|Rules|[Valid](assets/images/wave-start.webp)|
-|Quiz|[Valid](assets/images/wave-quiz.webp)|
-|Final|[Valid](assets/images/wave-final.webp)|
+|index.html Start modal|[Valid](assets/images/wave-start.webp)|
+|index.html Rules modal|[Valid](assets/images/wave-start.webp)|
+|index.html Quiz modal|[Valid](assets/images/wave-quiz.webp)|
+|index.html Final modal|[Valid](assets/images/wave-final.webp)|
+|404.html|[Valid](assets/images/wave-404.webp)|
 
 ## CSS
 |File|Validation|
@@ -45,10 +50,9 @@ The following tools were used to validate the project:
 |x|x|x|x|x|
 
 ## Unit Testing
+Please see [logic.test.js](assets/scripts/logic.js) and the [coverage report](coverage/lcov-report/index.html).
 
 ## Bugs Discovered
-Error: HTML Comments (\<!-- -->) not appearing in the quiz.
-
 ### Solved Bugs
 
 #### Issue: Getting Jest to work with ES6 Syntax and separated JavaScript files.
@@ -68,4 +72,4 @@ Create a  '.babelrc' file in your project root with the following content:
 ```
 
 ### Unsolved Bugs
-N/A
+Error: HTML comments (<!-- -->) aren't displayed correctly when fetched from the question set, due to lack of escaping.
