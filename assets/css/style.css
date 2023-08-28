@@ -162,12 +162,13 @@ main {
 }
 
 .rules__list {
-  padding: 1rem 1rem;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 1rem 2rem;
+  gap: 1rem;
   width: 100%;
-}
-
-.rules__item {
-  padding: 0.5rem 0;
 }
 
 .rules__question-choice {
