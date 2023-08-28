@@ -57,7 +57,7 @@ describe('retrieveQuestions function', () => {
   it('should return questions that are part of the original quiz array', () => {
     const questions = retrieveQuestions(3);
     questions.forEach(question => {
-      expect(JAVASCRIPT_QUIZ).toContain(question);
+      expect(allJavaScriptQuestions).toContain(question);
     });
   });
 

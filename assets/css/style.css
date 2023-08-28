@@ -135,7 +135,6 @@ main {
   width: 90%;
   background-color: var(--box-background, hsl(100, 100%, 100%));
   border-radius: 5px;
-  /* padding: 1rem 2rem; */
   box-shadow: 0px 3px 9px 0 hsla(0, 0%, 0%, 0.2), 0px 5px 15px 0 hsla(0, 0%, 0%, 0.12);
 }
 
@@ -352,7 +351,7 @@ main {
   width: 100%;
   display: flex;
   flex-flow: row wrap;
-  justify-content:space-between;
+  justify-content: space-between;
   align-items: center;
   gap: 0.5rem;
 }
@@ -369,6 +368,7 @@ main {
 }
 
 @media (max-width: 379px) {
+
   .quiz__footer,
   .quiz__footer,
   .rules__footer {
@@ -388,12 +388,12 @@ main {
   letter-spacing: 0.7px;
   border: 1px solid var(--button-border-color);
   box-shadow:
-    0 4px 6px rgba(0, 0, 0, 0.1),
     /* Ambient shadow */
-    0 1px 3px rgba(0, 0, 0, 0.2),
+    0 4px 6px rgba(0, 0, 0, 0.1),
     /* Sharp shadow */
+    0 1px 3px rgba(0, 0, 0, 0.2),
+    /* Inner glow */
     inset 0 0 10px rgba(255, 255, 255, 0.3);
-  /* Inner glow */
 }
 
 .button:focus {

@@ -1,6 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1693222043286" clover="3.2.0">
-  <project timestamp="1693222043286" name="All files">
-    <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0" elements="0" coveredelements="0" complexity="0" loc="0" ncloc="0" packages="0" files="0" classes="0"/>
+<coverage generated="1693225582640" clover="3.2.0">
+  <project timestamp="1693225582640" name="All files">
+    <metrics statements="12" coveredstatements="11" conditionals="1" coveredconditionals="0" methods="3" coveredmethods="2" elements="16" coveredelements="13" complexity="0" loc="12" ncloc="12" packages="1" files="2" classes="2"/>
+    <file name="allQuestions.js" path="C:\Users\CJ\Kartilo\assets\scripts\allQuestions.js">
+      <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <line num="2" count="1" type="stmt"/>
+    </file>
+    <file name="logic.js" path="C:\Users\CJ\Kartilo\assets\scripts\logic.js">
+      <metrics statements="11" coveredstatements="10" conditionals="1" coveredconditionals="0" methods="3" coveredmethods="2"/>
+      <line num="3" count="1" type="stmt"/>
+      <line num="7" count="7" type="stmt"/>
+      <line num="10" count="7" type="stmt"/>
+      <line num="13" count="574" type="stmt"/>
+      <line num="14" count="574" type="stmt"/>
+      <line num="17" count="574" type="stmt"/>
+      <line num="21" count="7" type="stmt"/>
+      <line num="27" count="3" type="stmt"/>
+      <line num="30" count="3" type="stmt"/>
+      <line num="32" count="3" type="stmt"/>
+      <line num="37" count="0" type="stmt"/>
+    </file>
   </project>
 </coverage>

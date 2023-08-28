@@ -107,7 +107,6 @@ quizSelectionButtons.forEach((button) => {
       displayCross(event.currentTarget);
       increaseIncorrectAnswer();
     }
-    showDetails();
   });
 });
 
@@ -186,9 +185,6 @@ function checkAnswer(button) {
   const spanContent = button.querySelector(".quiz__selection > span").textContent;
   const answer = shuffledArray[currentQuestionIndex - 1].Answer;
   let result;
-  console.table(shuffledArray);
-  console.log(`Selection: ${spanContent}`);
-  console.log(`Answer: ${answer}`);
   if (spanContent === answer) {
     result = true;
   } else {
@@ -215,16 +211,6 @@ function removeAllIcons() {
   for (let i = 0; i < allButtons.length; i++) {
     allButtons[i].classList.remove("fa-solid", "fa-times", "fa-check");
   }
-}
-
-// Display these for test purposes.
-function showDetails() {
-  console.log(`Question Index: ${currentQuestionIndex}`);
-  console.log(`Question Number: ${currentQuestionNumber}`);
-  console.log(`Total Questions: ${totalQuestionNum}`);
-  console.log(`Shuffled Array: ${shuffledArray}`);
-  console.log(`Correct Questions: ${correctAnswers}`);
-  console.log(`Incorrect Questions: ${incorrectAnswers}`);
 }
 
 // Increase the correct answer counter.
@@ -264,19 +250,3 @@ function clearScore() {
 function addMaxQuestions() {
   rulesMaxQuestionsInput.max = lengthOfAllQuestions;
 }
-
-export {
-  displayQuestion,
-  displayQuestionCounter,
-  displayTotalQuestionNum,
-  disableNextButton,
-  enableNextButton,
-  disableQuizButtons,
-  enableQuizButtons,
-  displayTick,
-  displayCross,
-  removeAllIcons,
-  showDetails,
-  increaseCorrectAnswer,
-  increaseIncorrectAnswer
-};

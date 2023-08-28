@@ -30,7 +30,7 @@
         <ol class="rules__list">
           <li class="rules__item">Your first answer is your final answer.</li>
           <li class="rules__item">You will get one point for each correct answer.</li>
-          <li class="rules__item">You cannot exit the quiz once you start.</li>
+          <li class="rules__item">If you exit the browser once you start you will lose your progress.</li>
         </ol>
       <div class="rules__question-choice">
         <label class="rules__question-label" for="questionInput">How many of the 185 questions would you like to test yourself against?</label>
@@ -44,12 +44,11 @@
     </section>
 
     <!-- The question section -->
-    <section class="quiz u-inactive"> <!-- u-inactive -->
+    <section class="quiz u-inactive">
       <header class="quiz__header">
         <h2 class="quiz__heading">Kartilo</h2>
         <p class="quiz__score-correct">Correct: <span>0</span></p>
         <p class="quiz__score-incorrect">Incorrect: <span>0</span></p>
-        <p class="quiz__timer-text">Time Left: <span class="quiz__timer-count">15</span></p>
       </header>
       <div class="quiz__questions-container">
         <div class="quiz__question">
@@ -70,7 +69,7 @@
       </div>
       <footer class="quiz__footer">
         <div class="quiz__progress">
-          <p><span class="quiz__current-q">x</span> of <span class="quiz__total-q">y</span> Questions</p>
+          <p><span class="quiz__current-q"></span> of <span class="quiz__total-q"></span> Questions</p>
         </div>
         <button aria-label="Click to show the next question" class="button button--next">Next Question</button>
       </footer>
