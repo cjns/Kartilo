@@ -79,9 +79,7 @@
 body {
   font-family: 'Roboto Flex', sans-serif;
   font-size: 16px;
-  /* Default body text size */
   font-weight: 400;
-  /* Regular weight */
   background-color: var(--body-background, hsl(144, 35%, 75%));
 }
 
@@ -260,7 +258,6 @@ main {
   flex-flow: row wrap;
   justify-content: flex-start;
   align-items: flex-end;
-  /* padding: 1rem 0; */
 }
 
 .quiz__questions-container {
@@ -421,7 +418,6 @@ main {
 }
 
 @media (max-width: 379px) {
-
   .quiz__footer,
   .quiz__footer,
   .rules__footer {
